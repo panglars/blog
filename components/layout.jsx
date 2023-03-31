@@ -4,7 +4,6 @@ import utilStyles from "../styles/utils.module.scss";
 import Link from "next/link";
 import Meta from "./meta";
 import Footer from "./footer";
-import Modeline from "./modeline";
 const name = "PangLAN";
 
 export default function Layout({ children }) {
@@ -34,7 +33,6 @@ export default function Layout({ children }) {
 
         <main>{children}</main>
       </div>
-      <Footer />
     </>
   );
 }
