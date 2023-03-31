@@ -4,6 +4,7 @@ import Layout from "../../components/layout";
 import Postbody from "../../components/post-body";
 import { getPostBySlug, getAllPosts } from "../../lib/posts";
 import utilStyles from "../../styles/utils.module.scss";
+import Modeline from "../../components/modeline";
 
 import Head from "next/head";
 
@@ -21,6 +22,7 @@ export default function Post({ post }) {
       <div className={utilStyles.lightText}>
         <Postbody content={post.content} />
       </div>
+      <Modeline bufferName={post.slug} />
     </Layout>
   );
 }
