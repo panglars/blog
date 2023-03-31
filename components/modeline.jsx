@@ -6,6 +6,7 @@ export default function Modeline({ bufferName = "Buffer" }) {
       <div>PangLAN {bufferName} "progress"</div>
       <Link href="/"> Home </Link>
       <Link href="/about"> About </Link>
+      <Link href="/firends"> Firends </Link>
     </>
   );
 }
