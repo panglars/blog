@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.scss";
 import { getAllPosts } from "../lib/posts";
 import Modeline from "../components/modeline";
+import { Fragment } from "react";
 
 export default function Index({ allPosts }) {
   return (
@@ -16,10 +17,10 @@ export default function Index({ allPosts }) {
           <ul className={utilStyles.list}>
             {allPosts.map((post) => (
               <li className={utilStyles.listItem} key={post.slug}>
-                <Link href={`/posts/${post.slug}`}>{post.title} </Link>
-                <br />
-                {post.date}
-                <br />
+                <Fragment>
+                  <Link href={`/posts/${post.slug}`}>{post.title} </Link>
+                  <div className={utilStyles.lightText}>{post.date}</div>
+                </Fragment>
               </li>
             ))}
           </ul>
