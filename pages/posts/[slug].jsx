@@ -18,7 +18,7 @@ export default function Post({ post }) {
       <Head>
         <title>{post.slug}</title>
       </Head>
-      <h1 className={utilStyles.headingXl}>{post.title}</h1>
+      <h1 className={utilStyles.headingh1}>{post.title}</h1>
       <div className={utilStyles.lightText}>
         <Postbody content={post.content} />
       </div>

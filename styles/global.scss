@@ -1,3 +1,5 @@
+@use "color";
+
 html,
 body {
   padding: 0;
@@ -6,6 +8,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  background-color: color.$back-ground;
 }
 
 * {
@@ -13,7 +16,7 @@ body {
 }
 
 a {
-  color: #0070f3;
+  color: color.$button;
   text-decoration: none;
 }
 
