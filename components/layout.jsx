@@ -1,8 +1,6 @@
-import Image from "next/image";
 import styles from "./layout.module.scss";
-import utilStyles from "../styles/utils.module.scss";
-import Link from "next/link";
 import Meta from "./meta";
+import Modeline from "./modeline";
 
 export default function Layout({ children }) {
   return (
@@ -11,6 +9,7 @@ export default function Layout({ children }) {
       <div className={styles.container}>
         <main>{children}</main>
       </div>
+      <Modeline />
     </>
   );
 }

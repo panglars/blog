@@ -1,5 +1,8 @@
 #+TITLE: First Post
 #+DATE:<2023-03-31 Fri>
+#+category: Test
+
+
 * The first post!
 It's so cool,let's make some test
 ** TODO flag

@@ -4,7 +4,6 @@ import Layout from "../../components/layout";
 import Postbody from "../../components/post-body";
 import { getPostBySlug, getAllPosts } from "../../lib/posts";
 import utilStyles from "../../styles/utils.module.scss";
-import Modeline from "../../components/modeline";
 
 import Head from "next/head";
 
@@ -19,10 +18,10 @@ export default function Post({ post }) {
         <title>{post.slug}</title>
       </Head>
       <h1 className={utilStyles.headingh1}>{post.title}</h1>
+
       <div className={utilStyles.lightText}>
         <Postbody content={post.content} />
       </div>
-      <Modeline bufferName={post.slug} />
     </Layout>
   );
 }
@@ -32,9 +31,8 @@ export async function getStaticProps({ params }) {
     "date",
     "slug",
     "author",
-    "author_picture",
-    "og_image",
-    "cover_image",
+    "category",
+    "tags",
     "content",
   ]);
   return {

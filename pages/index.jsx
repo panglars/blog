@@ -3,7 +3,6 @@ import Link from "next/link";
 import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.scss";
 import { getAllPosts } from "../lib/posts";
-import Modeline from "../components/modeline";
 import { Fragment } from "react";
 import Image from "next/image";
 const name = "PangLAN";
@@ -38,13 +37,14 @@ export default function Index({ allPosts }) {
               <li className={utilStyles.listItem} key={post.slug}>
                 <Fragment>
                   <Link href={`/posts/${post.slug}`}>{post.title} </Link>
-                  <div className={utilStyles.lightText}>{post.date}</div>
+                  <div className={utilStyles.lightText}>
+                    {post.date} {post.category}
+                  </div>
                 </Fragment>
               </li>
             ))}
           </ul>
         </section>
-        <Modeline bufferName="Index" />
       </Layout>
     </>
   );
@@ -56,9 +56,9 @@ export async function getStaticProps() {
     "date",
     "slug",
     "author",
-    "author_picture",
-    "cover_image",
-    "excerpt",
+    "category",
+    "tags",
+    "content",
   ]);
 
   return {
