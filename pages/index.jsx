@@ -39,6 +39,8 @@ export default function Index({ allPosts }) {
                   <Link href={`/posts/${post.slug}`}>{post.title} </Link>
                   <div className={utilStyles.lightText}>
                     {post.date} {post.category}
+                    <br />
+                    {post.tags}
                   </div>
                 </Fragment>
               </li>
