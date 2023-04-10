@@ -4,8 +4,3 @@ building...
 
 see [[https://github.com/rasendubi/uniorg/tree/master/examples/next-blog-starter][next-blog-starter]]
 
-** Somethings [0/4]
-*** TODO Global CSS
-*** TODO Modeline CSS
-*** TODO rss
-*** TODO wirte a post 
