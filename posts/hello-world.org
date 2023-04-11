@@ -4,7 +4,7 @@
 #+tags: test
 ** The first post!
 It's so cool,let's make some test
-*** TODO flag
+*** TODO This is a title
 
 #+begin_src python
 import imaplib
@@ -24,3 +24,7 @@ def imap_by_ssl(imapserver, user, passwd):
         server.logout()
 
 #+end_src
+
+** DONE 这是第二个标题
+CLOSED: [2023-04-11 Tue 09:09]
+

@@ -1,16 +1,14 @@
 @use "../styles/color";
 
 .modeline {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   bottom: 1.4em;
   width: 100%;
-
   border-bottom: 1px solid color.$main;
-
   background: color.$secondary;
-
   height: 2rem;
   line-height: 1.5em;
   padding: 0.2em;
@@ -19,6 +17,10 @@
   white-space: nowrap;
 }
 
-.navigate {
-  margin: 0, 2rem;
+.modeline .buffer {
+  white-space: nowrap;
+}
+
+.modeline .navigate {
+  margin-left: 2rem;
 }

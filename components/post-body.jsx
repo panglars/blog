@@ -15,7 +15,7 @@ export default function Postbody({ content }) {
   useEffect(() => {
     file.then((vfileObject) => {
       const value = vfileObject.value;
-      console.log(String(value));
+      //      console.log(String(value));
       setHighlightContext(value);
     });
   }, []);
