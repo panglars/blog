@@ -1,30 +1,49 @@
-#+TITLE: First Post
+#+TITLE: 博客架构
 #+DATE:<2023-03-31 Fri>
-#+category: Test
-#+tags: test
-** The first post!
-It's so cool,let's make some test
-*** TODO This is a title
+#+category: Blog
+#+tags:
+就当一篇博客了,其实也是测试文章
+我的第一个 nodeJS 项目,或者不是文档类的第一个项目
+** 框架
+pnpm + Next.js
+其实我并不知道 pnpm 比 yarn/npm 具体好在哪里
+** CSS
+只用了 SCSS,纯手(chatGPT 的手)写/抄,至于 tailwindCSS,等下个项目再用吧
+类 vim/emacs 各种 dashboard 样式
+** 文章处理
+使用 [[https://github.com/rasendubi/uniorg][Uniorg]] 解析 org-mode 文章
+至于为什么是 org?
+其实 markdown 很好用,但我用 emacs,造完全相同的轮子其实没啥意思
+** 代码高亮
+使用 [[https://github.com/rehypejs/rehype-highlight][rehype-highlight]] ,编程字体抄的 github 的字体配置
 
 #+begin_src python
-import imaplib
-import ssl
+# 一段python imap的代码
+  import imaplib
+   import ssl
 
-
-def imap_by_ssl(imapserver, user, passwd):
-    Context = ssl.create_default_context()
-    with imaplib.IMAP4_SSL(imapserver, ssl_context=Context) as server:
-        server.login(user, passwd)
-        server.select()
-        typ, data = server.search(None, 'ALL')
-        for num in data[0].split():
-            typ, data = server.fetch(num, '(RFC822)')
-            print('Message %s\n%s\n' % (num, data[0][1]))
-        server.close()
-        server.logout()
-
+   def imap_by_ssl(imapserver, user, passwd):
+       Context = ssl.create_default_context()
+       with imaplib.IMAP4_SSL(imapserver, ssl_context=Context) as server:
+           server.login(user, passwd)
+           server.select()
+           typ, data = server.search(None, 'ALL')
+           for num in data[0].split():
+               typ, data = server.fetch(num, '(RFC822)')
+               print('Message %s\n%s\n' % (num, data[0][1]))
+           server.close()
+           server.logout()
 #+end_src
 
-** DONE 这是第二个标题
-CLOSED: [2023-04-11 Tue 09:09]
+*** TODO 添加代码块编程语言与复制按钮
 
+** TODO 图片
+还没写样式,也没想好怎么 lazyload
+
+** TODO 评论系统
+没做,计划上 gitalk 之类的东西,或者就不加,想讨论的给我发邮件
+
+[[mailto:i@yinn.party][i@yinn.party]]
+
+** TODO RSS
+没做,WIP
