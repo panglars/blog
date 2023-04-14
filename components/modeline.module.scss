@@ -17,10 +17,19 @@
   white-space: nowrap;
 }
 
-.modeline .buffer {
-  white-space: nowrap;
+.navigate {
+  margin-left: 2rem;
 }
 
-.modeline .navigate {
-  margin-left: 2rem;
+.minibuffer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: color.$main;
+  height: 1.4em;
+  line-height: 1em;
+  padding: 0.2em;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }

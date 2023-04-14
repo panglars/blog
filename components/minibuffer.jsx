@@ -1,3 +1,9 @@
+import styles from "./modeline.module.scss";
+
 export default function Minibuffer() {
-  return <div></div>;
+  return (
+    <>
+      <div className={styles.minibuffer}>Minibuffer</div>
+    </>
+  );
 }

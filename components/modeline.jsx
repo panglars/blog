@@ -31,7 +31,7 @@ export default function Modeline({ bufferName = "Buffer" }) {
         <ReadingPercentage />
       </div>
 
-      <div className="navigate">
+      <div className={styles.navigate}>
         <Link href="/"> Home </Link>
         <Link href="/archives"> Archives </Link>
         <Link href="/about"> About </Link>

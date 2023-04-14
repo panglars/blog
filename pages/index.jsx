@@ -6,7 +6,7 @@ import { getAllPosts } from "../lib/posts";
 import { Fragment } from "react";
 import Image from "next/image";
 const name = "PangLAN";
-
+// TODO Add a line
 export default function Index({ allPosts }) {
   return (
     <>

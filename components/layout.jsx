@@ -1,5 +1,6 @@
 import styles from "./layout.module.scss";
 import Meta from "./meta";
+import Minibuffer from "./minibuffer";
 import Modeline from "./modeline";
 
 export default function Layout({ children }) {
@@ -10,6 +11,7 @@ export default function Layout({ children }) {
         <main>{children}</main>
       </div>
       <Modeline />
+      <Minibuffer />
     </>
   );
 }
