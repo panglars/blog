@@ -4,8 +4,8 @@ import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.scss";
 import { getAllPosts } from "../lib/posts";
 import { Fragment } from "react";
-import Image from "next/image";
-const name = "PangLAN";
+import Banner from "../components/banner";
+
 // TODO Add a line
 export default function Index({ allPosts }) {
   return (
@@ -14,24 +14,9 @@ export default function Index({ allPosts }) {
         <Head>
           <title>Index</title>
         </Head>
-
+        <Banner />
+        <br />
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-          <Link href="/">
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={108}
-              width={108}
-              alt=""
-            />
-          </Link>
-          <h2 className={utilStyles.headingLg}>
-            <Link href="/" className={utilStyles.colorInherit}>
-              {name}
-            </Link>
-          </h2>
-
           <ul className={utilStyles.list}>
             {allPosts.map((post) => (
               <li className={utilStyles.listItem} key={post.slug}>
