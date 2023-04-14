@@ -7,6 +7,7 @@
 ** 框架
 pnpm + Next.js
 其实我并不知道 pnpm 比 yarn/npm 具体好在哪里
+至于不用现成框架(hugo,hexo 等),一是为了学习 js,二是是我有很多个人需求
 ** CSS
 只用了 SCSS,纯手(chatGPT 的手)写/抄,至于 tailwindCSS,等下个项目再用吧
 类 vim/emacs 各种 dashboard 样式
