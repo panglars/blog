@@ -4,12 +4,6 @@
 }
 /* TODO add lxgwWenKai */
 
-.org h2 {
-  font-size: 1.875rem;
-  margin: 2.5rem 0 1rem 0rem;
-  line-height: 1.375;
-}
-
 .org h3 {
   font-size: 1.5rem;
   margin: 2rem 0 1rem 2rem;
@@ -18,6 +12,11 @@
 
 .org h3 + * {
   margin: 0 0 0 2rem;
+}
+.org h2 {
+  font-size: 1.875rem;
+  margin: 2.5rem 0 1rem 0rem;
+  line-height: 1.375;
 }
 
 .org p,
