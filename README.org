@@ -4,9 +4,13 @@ building...
 
 see [[https://github.com/rasendubi/uniorg/tree/master/examples/next-blog-starter][next-blog-starter]]
 
+[[https://yinn.party/posts/hello-world][中文介绍]]
+
 ** Todo
 
 *** TODO RSS
 
 *** TODO Category page
 
+*** TODO Blog themes
+at least light/dark mode 
