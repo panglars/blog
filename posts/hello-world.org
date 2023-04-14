@@ -1,4 +1,4 @@
-#+TITLE: 博客架构
+#+TITLE: 我的博客架构
 #+DATE:<2023-03-31 Fri>
 #+category: Blog
 #+tags:
@@ -41,6 +41,10 @@ pnpm + Next.js
 ** TODO 图片
 还没写样式,也没想好怎么 lazyload
 
+还需要配置一下 org-download
+
+
+
 ** TODO 评论系统
 没做,计划上 gitalk 之类的东西,或者就不加,想讨论的给我发邮件
 
@@ -48,3 +52,4 @@ pnpm + Next.js
 
 ** TODO RSS
 没做,WIP
+

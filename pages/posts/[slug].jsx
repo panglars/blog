@@ -15,7 +15,7 @@ export default function Post({ post }) {
   return (
     <Layout>
       <Head>
-        <title>{post.slug}</title>
+        <title>{post.title}</title>
       </Head>
       <h1 className={utilStyles.headingh1}>{post.title}</h1>
 
