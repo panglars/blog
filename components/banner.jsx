@@ -6,7 +6,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTelegram, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faRss } from "@fortawesome/free-solid-svg-icons";
 config.autoAddCss = false;
 
 const Title = "PangLan";
@@ -33,6 +33,7 @@ export default function Banner() {
       <ul className={styles.list}>
         <li className={styles.listItem}>
           <Link href={"https://github.com/Fogberry"}>
+            &nbsp;
             <FontAwesomeIcon icon={faTelegram} />
             &nbsp;Telegram
           </Link>
@@ -40,6 +41,7 @@ export default function Banner() {
 
         <li className={styles.listItem}>
           <Link href={"https://github.com/Fogberry"}>
+            &nbsp;
             <FontAwesomeIcon icon={faGithub} />
             &nbsp;Github
           </Link>
@@ -47,8 +49,16 @@ export default function Banner() {
 
         <li className={styles.listItem}>
           <Link href={"mailto:i@yinn.party"}>
+            &nbsp;
             <FontAwesomeIcon icon={faEnvelope} />
             &nbsp;Email
+          </Link>
+        </li>
+        <li className={styles.listItem}>
+          <Link href={"/rss.xml"}>
+            &nbsp;
+            <FontAwesomeIcon icon={faRss} />
+            &nbsp;RSS
           </Link>
         </li>
       </ul>

@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
+import { Fragment } from "react";
 import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.scss";
 import { getAllPosts } from "../lib/posts";
-import { Fragment } from "react";
+import { generateRSS } from "../lib/rss";
 import Banner from "../components/banner";
 
 // TODO Add a line
@@ -48,7 +49,7 @@ export async function getStaticProps() {
     "tags",
     "content",
   ]);
-
+  await generateRSS();
   return {
     props: { allPosts },
   };
