@@ -3,7 +3,7 @@ import styles from "./modeline.module.scss";
 export default function Minibuffer() {
   return (
     <>
-      <div className={styles.minibuffer}>Minibuffer</div>
+      <div className={styles.minibuffer}> @2023PangLAN &nbsp;</div>
     </>
   );
 }

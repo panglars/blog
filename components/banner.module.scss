@@ -8,3 +8,15 @@
   display: inline-block;
   margin-right: 10px;
 }
+
+.banner {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bannerimg {
+  display: block;
+  margin: auto;
+}

@@ -26,7 +26,6 @@ export default function Modeline({ bufferName = "Buffer" }) {
   return (
     <div className={styles.modeline}>
       <div className="buffer">
-        @2023PangLAN &nbsp;
         {bufferName} &nbsp;
         <ReadingPercentage />
       </div>
