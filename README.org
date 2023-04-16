@@ -8,7 +8,8 @@ see [[https://github.com/rasendubi/uniorg/tree/master/examples/next-blog-starter
 
 ** Todo
 
-*** TODO RSS
+*** DONE RSS
+CLOSED: [2023-04-16 Sun 22:20]
 
 *** TODO Category page
 
