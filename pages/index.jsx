@@ -16,6 +16,7 @@ export default function Index({ allPosts }) {
         </Head>
         <Banner />
         <br />
+        <br />
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <ul className={utilStyles.list}>
             {allPosts.map((post) => (

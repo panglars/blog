@@ -21,10 +21,16 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  background-color: color.$button;
+  color: color.$back-ground;
+  text-decoration: none;
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+p {
+  color: color.$paragraph;
 }

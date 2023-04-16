@@ -9,6 +9,9 @@ import { faTelegram, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 config.autoAddCss = false;
 
+const Title = "PangLan";
+const subTitle = "";
+
 export default function Banner() {
   return (
     <div className={styles.banner}>
@@ -24,23 +27,29 @@ export default function Banner() {
       </Link>
       <h2 className={utilStyles.headingLg}>
         <Link href="/" className={utilStyles.colorInherit}>
-          I'm PangLan
+          {Title}
         </Link>
       </h2>
       <ul className={styles.list}>
         <li className={styles.listItem}>
-          <FontAwesomeIcon icon={faTelegram} />
-          <Link href={"https://github.com/Fogberry"}>Telegram</Link>
+          <Link href={"https://github.com/Fogberry"}>
+            <FontAwesomeIcon icon={faTelegram} />
+            &nbsp;Telegram
+          </Link>
         </li>
 
         <li className={styles.listItem}>
-          <FontAwesomeIcon icon={faGithub} />
-          <Link href={"https://github.com/Fogberry"}>Github</Link>
+          <Link href={"https://github.com/Fogberry"}>
+            <FontAwesomeIcon icon={faGithub} />
+            &nbsp;Github
+          </Link>
         </li>
 
         <li className={styles.listItem}>
-          <FontAwesomeIcon icon={faEnvelope} />
-          <Link href={"mailto:i@yinn.party"}>Email</Link>
+          <Link href={"mailto:i@yinn.party"}>
+            <FontAwesomeIcon icon={faEnvelope} />
+            &nbsp;Email
+          </Link>
         </li>
       </ul>
     </div>
