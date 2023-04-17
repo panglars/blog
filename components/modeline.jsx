@@ -30,11 +30,23 @@ export default function Modeline({ bufferName = "Buffer" }) {
         <ReadingPercentage />
       </div>
 
-      <div className={styles.navigate}>
-        <Link href="/"> Home </Link>
-        <Link href="/archives"> Archives </Link>
-        <Link href="/about"> About </Link>
-        <Link href="/firends"> Firends </Link>
+      <div>
+        <Link href="/" className={styles.navigate}>
+          {" "}
+          Home{" "}
+        </Link>
+        <Link href="/archives" className={styles.navigate}>
+          {" "}
+          Archives{" "}
+        </Link>
+        <Link href="/about" className={styles.navigate}>
+          {" "}
+          About{" "}
+        </Link>
+        <Link href="/firends" className={styles.navigate}>
+          {" "}
+          Firends{" "}
+        </Link>
       </div>
     </div>
   );

@@ -10,7 +10,8 @@
   border-bottom: 1px solid color.$main;
   background: color.$secondary;
   height: 2rem;
-  line-height: 1.5em;
+  line-height: 2rem;
+  font-size: 1.25rem;
   padding: 0.2em;
   margin: 0;
   overflow: hidden;
@@ -18,7 +19,7 @@
 }
 
 .navigate {
-  margin-left: 2rem;
+  margin-left: 0.5rem;
 }
 
 .minibuffer {

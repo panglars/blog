@@ -34,3 +34,13 @@ img {
 p {
   color: color.$paragraph;
 }
+
+.TODO {
+  background-color: green;
+  color: white;
+}
+
+.DONE {
+  background-color: gray;
+  color: white;
+}

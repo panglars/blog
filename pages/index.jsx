@@ -25,7 +25,7 @@ export default function Index({ allPosts }) {
                 <Fragment>
                   <Link href={`/posts/${post.slug}`}>{post.title} </Link>
                   <div className={utilStyles.lightText}>
-                    {post.date} {post.category}
+                    {post.date.replace(/^<(.*)>$/, "$1")} {post.category}
                     <br />
                     {post.tags}
                   </div>

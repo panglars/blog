@@ -6,6 +6,7 @@ import { getPostBySlug, getAllPosts } from "../../lib/posts";
 import utilStyles from "../../styles/utils.module.scss";
 
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Post({ post }) {
   const router = useRouter();
@@ -18,6 +19,14 @@ export default function Post({ post }) {
         <title>{post.title}</title>
       </Head>
       <h1 className={utilStyles.headingh1}>{post.title}</h1>
+      <div className={utilStyles.flexbox}>
+        <div className="date">Date:{post.date.replace(/^<(.*)>$/, "$1")}</div>
+        <div>
+          Category:
+          <Link href="/archives">{post.category}</Link>
+        </div>
+        <div>Tags:{post.tags}</div>
+      </div>
 
       <div className={utilStyles.lightText}>
         <Postbody content={post.content} />
@@ -25,6 +34,7 @@ export default function Post({ post }) {
     </Layout>
   );
 }
+// TODO add category ,tags pages
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
     "title",

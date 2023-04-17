@@ -1,7 +1,7 @@
 #+TITLE: 我的博客架构
 #+DATE:<2023-03-31 Fri>
 #+category: Blog
-#+tags:
+#+tags: test
 就当一篇博客了,其实也是测试文章
 我的第一个 nodeJS 项目,或者不是文档类的第一个项目
 ** 框架
@@ -15,6 +15,9 @@ Next.js
 https://github.com/Fogberry/blog/blob/main/public/images/1.webp
 
 在上课时用 chromebook 原装笔画的
+
+*** DONE todo 高亮
+CLOSED: [2023-04-17 Mon 21:18]
 ** 文章处理
 使用 [[https://github.com/rasendubi/uniorg][Uniorg]] 解析 org-mode 文章
 至于为什么是 org?

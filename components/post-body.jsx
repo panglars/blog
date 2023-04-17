@@ -19,7 +19,6 @@ export default function Postbody({ content }) {
       setHighlightContext(value);
     });
   }, []);
-
   return (
     <div className={orgStyles["org"]}>
       <div dangerouslySetInnerHTML={{ __html: highlightContext }} />

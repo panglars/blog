@@ -57,3 +57,9 @@
   line-height: 1.625;
   color: color.$paragraph;
 }
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
