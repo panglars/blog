@@ -14,7 +14,7 @@ export default function Archives({ allPosts }) {
 
     return acc;
   }, {});
-  console.log(categorizedPosts);
+  // console.log(categorizedPosts);
 
   return (
     <Layout>
