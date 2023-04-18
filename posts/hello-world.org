@@ -12,7 +12,6 @@ Next.js
 只用了 SCSS,纯手(chatGPT 的手)写/抄,至于 tailwindCSS,等下个项目再用吧
 主页计划做成 类 vim/emacs 各种 dashboard 样式
 
-https://github.com/Fogberry/blog/blob/main/public/images/1.webp
 
 在上课时用 chromebook 原装笔画的
 

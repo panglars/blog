@@ -7,7 +7,7 @@ import { getAllPosts } from "../lib/posts";
 import { generateRSS } from "../lib/rss";
 import Banner from "../components/banner";
 
-// TODO Add a line
+// TODO Fallback post.date
 export default function Index({ allPosts }) {
   return (
     <>
@@ -21,15 +21,20 @@ export default function Index({ allPosts }) {
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <ul className={utilStyles.list}>
             {allPosts.map((post) => (
-              <li className={utilStyles.listItem} key={post.slug}>
-                <Fragment>
-                  <Link href={`/posts/${post.slug}`}>{post.title} </Link>
-                  <div className={utilStyles.lightText}>
-                    {post.date.replace(/^<(.*)>$/, "$1")} {post.category}
-                    <br />
-                    {post.tags}
+              <li className={utilStyles.listItem} key={post.date}>
+                <div className={utilStyles.flexBox}>
+                  <div>
+                    <Link href={`/posts/${post.slug}`}>{post.title} </Link>
                   </div>
-                </Fragment>
+
+                  <div className={utilStyles.lightText}>
+                    {post.date.replace(/^<(.*)>$/, "$1")}
+                  </div>
+                </div>
+                <div className={utilStyles.flexBox}>
+                  <div className={utilStyles.lightText}>{post.category}</div>
+                  <div className={utilStyles.lightText}>{post.tags}</div>
+                </div>
               </li>
             ))}
           </ul>

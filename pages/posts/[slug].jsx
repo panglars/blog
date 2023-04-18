@@ -19,8 +19,8 @@ export default function Post({ post }) {
         <title>{post.title}</title>
       </Head>
       <h1 className={utilStyles.headingh1}>{post.title}</h1>
-      <div className={utilStyles.flexbox}>
-        <div className="date">Date:{post.date.replace(/^<(.*)>$/, "$1")}</div>
+      <div className={utilStyles.flexBox}>
+        <div>Date:{post.date.replace(/^<(.*)>$/, "$1")}</div>
         <div>
           Category:
           <Link href="/archives">{post.category}</Link>
