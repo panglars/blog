@@ -13,7 +13,7 @@ export default function Index({ allPosts }) {
     <>
       <Layout>
         <Head>
-          <title>Index</title>
+          <title>PangLAN's Blog</title>
         </Head>
         <Banner />
         <br />
@@ -32,8 +32,10 @@ export default function Index({ allPosts }) {
                   </div>
                 </div>
                 <div className={utilStyles.flexBox}>
-                  <div className={utilStyles.lightText}>{post.category}</div>
-                  <div className={utilStyles.lightText}>{post.tags}</div>
+                  <div className={utilStyles.lightText}>
+                    Category:{post.category}
+                  </div>
+                  <div className={utilStyles.lightText}>Tags:{post.tags}</div>
                 </div>
               </li>
             ))}

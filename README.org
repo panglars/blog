@@ -11,7 +11,8 @@ see [[https://github.com/rasendubi/uniorg/tree/master/examples/next-blog-starter
 *** DONE RSS
 CLOSED: [2023-04-16 Sun 22:20]
 
-*** TODO Category page
+*** DONE Category page
+CLOSED: [2023-04-18 Tue 09:36]
 
 *** TODO Blog themes
 at least light/dark mode 

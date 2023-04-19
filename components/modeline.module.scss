@@ -16,21 +16,34 @@
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
+  font-family: SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono,
+    monospace;
 }
 
 .navigate {
   margin-left: 0.5rem;
 }
 
+@media screen and (max-width: 450px) {
+  .bufferInfo {
+    display: none;
+  }
+}
+
+.bufferInfo {
+}
+
 .minibuffer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: 1.4rem;
   background: color.$back-ground;
-  height: 1.4em;
   line-height: 1em;
   padding: 0.2em;
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
+  font-family: SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono,
+    monospace;
 }

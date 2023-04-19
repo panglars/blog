@@ -9,8 +9,8 @@ import { faTelegram, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faRss } from "@fortawesome/free-solid-svg-icons";
 config.autoAddCss = false;
 
-const Title = "PangLan";
-const subTitle = "";
+const Title = "PangLan's Blog";
+const subTitle = "nothing";
 
 export default function Banner() {
   return (
@@ -30,6 +30,7 @@ export default function Banner() {
           {Title}
         </Link>
       </h2>
+      <p className={styles.lightText}>{subTitle}</p>
       <ul className={styles.list}>
         <li className={styles.listItem}>
           <Link href={"https://github.com/Fogberry"}>
