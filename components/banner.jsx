@@ -10,7 +10,7 @@ import { faEnvelope, faRss } from "@fortawesome/free-solid-svg-icons";
 config.autoAddCss = false;
 
 const Title = "PangLan's Blog";
-const subTitle = "nothing";
+const subTitle = "无聊的人";
 
 export default function Banner() {
   return (

@@ -1,13 +1,12 @@
 import orgStyles from "./org-styles.module.scss";
-import rehypeHighlight from "rehype-highlight";
 import { rehype } from "rehype";
 import { useEffect, useState } from "react";
-import "highlight.js/styles/base16/solarized-light.css";
+import rehypePrism from "rehype-prism-plus";
 
 export default function Postbody({ content }) {
   const file = rehype()
     .data("settings", { fragment: true })
-    .use(rehypeHighlight)
+    .use(rehypePrism)
     .process(content);
 
   const [highlightContext, setHighlightContext] = useState(content);
@@ -15,7 +14,6 @@ export default function Postbody({ content }) {
   useEffect(() => {
     file.then((vfileObject) => {
       const value = vfileObject.value;
-      //      console.log(String(value));
       setHighlightContext(value);
     });
   }, []);

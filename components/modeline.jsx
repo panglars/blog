@@ -16,7 +16,7 @@ function ReadingPercentage() {
   const [percentage, setPercentage] = useState(0);
 
   useEffect(() => {
-    function handleScroll() {
+    async function handleScroll() {
       const totalHeight = document.documentElement.scrollHeight;
       const scrollPosition =
         window.pageYOffset || document.documentElement.scrollTop;
