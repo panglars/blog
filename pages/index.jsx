@@ -33,7 +33,7 @@ export default function Index({ allPosts }) {
                 </div>
                 <div className={utilStyles.flexBox}>
                   <div className={utilStyles.lightText}>
-                    Category:{post.category}
+                    <Link href={`/archives`}>Category:{post.category}</Link>
                   </div>
                   <div className={utilStyles.lightText}>Tags:{post.tags}</div>
                 </div>

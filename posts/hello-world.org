@@ -6,25 +6,23 @@
 我的第一个 nodeJS 项目,或者不是文档类的第一个项目
 ** 框架
 Next.js
-包管理器使用 pnpm,其实我并不知道 pnpm 比 yarn/npm 具体好在哪里
+包管理器使用 pnpm,当时选择的唯一理由是它看起来是最晚出现的
 至于不用现成框架(hugo,hexo 等),一是为了学习 js,二是希望有比较高的自定义性
 ** CSS
-只用了 SCSS,纯手(chatGPT 的手)写/抄,至于 tailwindCSS,等下个项目再用吧
+只用了 SCSS,纯手(chatGPT 的手)写/抄,确实很丑,计划等暑假重构一下
 主页计划做成 类 vim/emacs 各种 dashboard 样式
-
-
-在上课时用 chromebook 原装笔画的
+*** TODO 主题
+暗色模式和自动
 
 *** DONE todo 高亮
 CLOSED: [2023-04-17 Mon 21:18]
 ** 文章处理
 使用 [[https://github.com/rasendubi/uniorg][Uniorg]] 解析 org-mode 文章
 至于为什么是 org?
-你说的对, markdown 很好用,但我用 emacs,造完全相同的轮子其实没啥意思
+你说的对, markdown 很好用,但造完全相同的轮子其实没啥意思
 ** 代码高亮
-使用 [[https://github.com/rehypejs/rehype-highlight][rehype-highlight]] ,编程字体抄的 github 的字体配置
 
-#+begin_src python
+#+begin_src python 
 # 一段python imap的代码
   import imaplib
    import ssl
@@ -45,16 +43,16 @@ CLOSED: [2023-04-17 Mon 21:18]
 *** TODO 添加代码块编程语言与复制按钮
 
 ** TODO 图片
-还没写样式,也没想好怎么 lazyload
-
-还需要配置一下 org-download
-
+没想好怎么 lazyload,图床其实也是一个问题
+可能还需要配置一下 org-download?
+在上课时用 chromebook 随便画的一张设计图
 
 ** TODO 评论系统
-没做,计划上 gitalk 之类的东西,或者就不加,想讨论的给我发邮件
-
+计划上 gitalk 之类的东西,或者就不加,想讨论的给我发邮件
 [[mailto:i@yinn.party][i@yinn.party]]
 
+** TODO Modeline
+显示 buffer 名字:需要一些 react 相关知识
 ** DONE RSS
 CLOSED: [2023-04-16 Sun 22:21]
 使用[[https://github.com/jpmonette/feed][Feed]]生成 RSS

@@ -32,3 +32,4 @@ yarn-error.log*
 .wakatime-project
 
 /public/rss.xml
+/.vscode/
