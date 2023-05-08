@@ -7,6 +7,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTelegram, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faRss } from "@fortawesome/free-solid-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 config.autoAddCss = false;
 
 const Title = "PangLan's Blog";
@@ -18,10 +19,10 @@ export default function Banner() {
       <Link href="/">
         <Image
           priority
-          src="/images/profile.jpg"
+          src="/images/profile.png"
           className={styles.bannerimg}
-          height={108}
-          width={108}
+          height={216}
+          width={432}
           alt=""
         />
       </Link>
@@ -33,13 +34,19 @@ export default function Banner() {
       <p className={styles.lightText}>{subTitle}</p>
       <ul className={styles.list}>
         <li className={styles.listItem}>
-          <Link href={"https://github.com/Fogberry"}>
+          <Link href={"https://t.me/wc_bing"}>
             &nbsp;
             <FontAwesomeIcon icon={faTelegram} />
             &nbsp;Telegram
           </Link>
         </li>
-
+        <li className={styles.listItem}>
+          <Link href={""}>
+            &nbsp;
+            <FontAwesomeIcon icon={faTwitter} />
+            &nbsp;Twitter
+          </Link>
+        </li>
         <li className={styles.listItem}>
           <Link href={"https://github.com/Fogberry"}>
             &nbsp;
@@ -47,7 +54,6 @@ export default function Banner() {
             &nbsp;Github
           </Link>
         </li>
-
         <li className={styles.listItem}>
           <Link href={"mailto:i@yinn.party"}>
             &nbsp;
