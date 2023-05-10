@@ -27,7 +27,7 @@ export default function Banner() {
         />
       </Link>
       <h2 className={utilStyles.headingLg}>
-        <Link href="/" className={utilStyles.colorInherit}>
+        <Link href="/" className="">
           {Title}
         </Link>
       </h2>

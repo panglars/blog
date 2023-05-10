@@ -28,7 +28,7 @@ export default function Post({ post }) {
         <div>Tags:{post.tags}</div>
       </div>
 
-      <div className={utilStyles.lightText}>
+      <div className={utilStyles.context}>
         <Postbody content={post.content} />
       </div>
     </Layout>

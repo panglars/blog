@@ -5,11 +5,12 @@ import { Fragment, useEffect, useState } from "react";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTelegram, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faRss } from "@fortawesome/free-solid-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faNewspaper } from "@fortawesome/free-regular-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { useTheme } from "next-themes";
+import { faMoon } from "@fortawesome/free-regular-svg-icons";
+import { faSun } from "@fortawesome/free-regular-svg-icons";
 config.autoAddCss = false;
 
 function ReadingPercentage() {
@@ -29,45 +30,72 @@ function ReadingPercentage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return <>{percentage}%</>;
+  return <>{`  ${percentage}%  `}</>;
 }
 
 function BufferName() {
   const routerName = useRouter();
   // console.log(bufferName.pathname);
-  let bufferName = String(routerName.pathname);
+  let bufferName = String(routerName.pathname),
+    bufferNameMessage;
   if (bufferName == "/") {
-    return (
+    bufferNameMessage = (
       <>
-        <FontAwesomeIcon icon={faHouse} />
-        &nbsp;Index
+        <FontAwesomeIcon icon={faHouse} /> Index
       </>
     );
   } else if (bufferName == "/posts/[slug]") {
-    return (
+    bufferNameMessage = (
       <>
-        <FontAwesomeIcon icon={faNewspaper} />
-        &nbsp;Post
+        <FontAwesomeIcon icon={faNewspaper} /> Post
       </>
     );
   } else {
-    return (
+    bufferNameMessage = (
       <>
-        <FontAwesomeIcon icon={faGlobe} />
-        &nbsp;
-        {bufferName.slice(1)}
+        <FontAwesomeIcon icon={faGlobe} /> {bufferName.slice(1)}
       </>
     );
   }
+  return <>{bufferNameMessage} </>;
 }
 
+function ThemeButton() {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+  function toggleTheme() {
+    setTheme(theme === "light" ? "dark" : "light");
+  }
+  let themeicon;
+  if (theme === "light") {
+    themeicon = <FontAwesomeIcon icon={faMoon} />;
+  } else {
+    themeicon = <FontAwesomeIcon icon={faSun} />;
+  }
+  return (
+    <>
+      <Link href="javascript:void(0)" onClick={toggleTheme}>
+        {themeicon}
+        {" " + theme}
+      </Link>
+    </>
+  );
+}
 export default function Modeline() {
   return (
     <div className={styles.modeline}>
       <div className={styles.bufferInfo}>
         <BufferName />
-        &nbsp;
         <ReadingPercentage />
+        <ThemeButton />
       </div>
 
       <div>
