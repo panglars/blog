@@ -1,14 +1,22 @@
 @use "color";
+@import "lxgw-wenkai-webfont/lxgwwenkai-regular.css";
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "LXGW WenKai", Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  background-color: color.$back-ground;
+  background-color: color.$base3;
+  color: color.$base00;
+}
+
+[data-theme="dark"],
+[data-theme="dark"] body {
+  color: color.$base0;
+  background: color.$base03;
 }
 
 * {
@@ -16,14 +24,32 @@ body {
 }
 
 a {
-  color: color.$button;
+  color: color.$blue;
   text-decoration: none;
 }
 
 a:hover {
-  background-color: color.$button;
-  color: color.$back-ground;
+  background-color: color.$blue;
+  color: color.$base3;
   text-decoration: none;
+}
+
+[data-theme="dark"] {
+  a {
+    color: color.$green;
+  }
+  a:hover {
+    background-color: color.$green;
+    color: color.$base03;
+  }
+}
+
+button {
+  background-color: color.$blue;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
 img {
@@ -31,16 +57,12 @@ img {
   display: block;
 }
 
-p {
-  color: color.$paragraph;
-}
-
 .TODO {
-  background-color: green;
-  color: white;
+  background-color: color.$green;
+  color: color.$base3;
 }
 
 .DONE {
-  background-color: gray;
-  color: white;
+  background-color: color.$yellow;
+  color: color.$base3;
 }

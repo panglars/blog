@@ -46,7 +46,7 @@
 }
 
 .listItem {
-  color: color.$headline;
+  color: color.$base01;
   font-size: 1.825rem;
   line-height: 1.375;
   margin: 0 0 1.25rem;
@@ -55,7 +55,16 @@
 .lightText {
   font-size: 1rem;
   line-height: 1.625;
-  color: color.$paragraph;
+  color: color.$base01;
+}
+
+[data-theme="dark"] {
+  .lightText {
+    color: color.$base1;
+  }
+  .lightText {
+    color: color.$base1;
+  }
 }
 
 .flexBox {
