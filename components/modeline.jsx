@@ -5,14 +5,18 @@ import { Fragment, useEffect, useState } from "react";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
-import { faNewspaper } from "@fortawesome/free-regular-svg-icons";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import {
+  faNewspaper,
+  faMoon,
+  faSun,
+} from "@fortawesome/free-regular-svg-icons";
 import { useTheme } from "next-themes";
-import { faMoon } from "@fortawesome/free-regular-svg-icons";
-import { faSun } from "@fortawesome/free-regular-svg-icons";
 config.autoAddCss = false;
 
+function Rainbow_block() {
+  return <>{"█ "}</>;
+}
 function ReadingPercentage() {
   const [percentage, setPercentage] = useState(0);
 
@@ -57,7 +61,7 @@ function BufferName() {
       </>
     );
   }
-  return <>{bufferNameMessage} </>;
+  return <> {bufferNameMessage} </>;
 }
 
 function ThemeButton() {
@@ -93,6 +97,7 @@ export default function Modeline() {
   return (
     <div className={styles.modeline}>
       <div className={styles.bufferInfo}>
+        <Rainbow_block />
         <BufferName />
         <ReadingPercentage />
         <ThemeButton />

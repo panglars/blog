@@ -17,7 +17,8 @@ CLOSED: [2023-04-16 Sun 22:20]
 *** DONE Category page
 CLOSED: [2023-04-18 Tue 09:36]
 
-*** TODO Blog themes
+*** DONE Blog themes
+CLOSED: [2023-05-10 Wed 22:17]
 at least light/dark mode
 **** Auto dark mode
 

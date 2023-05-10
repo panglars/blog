@@ -14,7 +14,8 @@ Next.js
 *** 字体
 计划使用鹭霞文楷
 
-*** TODO 主题
+*** DONE 主题
+CLOSED: [2023-05-10 Wed 22:17]
 暗色模式和自动
 *** DONE todo 高亮
 CLOSED: [2023-04-17 Mon 21:18]
@@ -54,7 +55,11 @@ CLOSED: [2023-04-17 Mon 21:18]
 [[mailto:i@yinn.party][i@yinn.party]]
 
 ** TODO Modeline
-显示 buffer 名字:需要一些 react 相关知识
++ 显示文章名字或路径
+
+** TODO Minibuffer
++ 显示一些日志?
+  
 ** DONE RSS
 CLOSED: [2023-04-16 Sun 22:21]
 使用[[https://github.com/jpmonette/feed][Feed]]生成 RSS
