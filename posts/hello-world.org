@@ -2,6 +2,7 @@
 #+DATE:<2023-03-31 Fri>
 #+category: Blog
 #+tags: test
+
 就当一篇博客了,其实也是测试文章
 我的第一个 nodeJS 项目,或者不是文档类的第一个项目
 ** 框架
@@ -13,7 +14,6 @@ Next.js
 主页计划做成 类 vim/emacs 各种 dashboard 样式
 *** 字体
 计划使用鹭霞文楷
-
 *** DONE 主题
 CLOSED: [2023-05-10 Wed 22:17]
 暗色模式和自动

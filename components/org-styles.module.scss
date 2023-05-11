@@ -74,4 +74,15 @@
     line-height: 1.25;
   }
 }
-/* TODO add lxgwWenKai */
+
+[data-theme="dark"] .org {
+  h2 {
+    color: color.$green;
+  }
+  h3 {
+    color: color.$cyan;
+  }
+  h4 {
+    color: color.$blue;
+  }
+}

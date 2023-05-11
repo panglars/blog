@@ -1,16 +1,15 @@
 @use "color";
-@import "lxgw-wenkai-webfont/lxgwwenkai-regular.css";
-
+@import "lxgw-wenkai-webfont/style.css";
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "LXGW WenKai", Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "LXGW WenKai Mono", Ubuntu, Cantarell, Fira Sans, sans-serif;
+  font-weight: 700;
   line-height: 1.6;
   font-size: 18px;
   background-color: color.$base3;
-  color: color.$base00;
+  color: color.$base01;
 }
 
 [data-theme="dark"],
@@ -36,10 +35,10 @@ a:hover {
 
 [data-theme="dark"] {
   a {
-    color: color.$green;
+    color: color.$blue;
   }
   a:hover {
-    background-color: color.$green;
+    background-color: color.$blue;
     color: color.$base03;
   }
 }
