@@ -1,25 +1,13 @@
 * Blog
+[[https://yinn.party/posts/hello-world][中文介绍]]
 
 building...
 
 see [[https://github.com/rasendubi/uniorg/tree/master/examples/next-blog-starter][next-blog-starter]]
 
-[[https://yinn.party/posts/hello-world][中文介绍]]
 
 ** Interduction
 Build in Next.js
 
-** Todo
-
-*** DONE RSS
-CLOSED: [2023-04-16 Sun 22:20]
-
-*** DONE Category page
-CLOSED: [2023-04-18 Tue 09:36]
-
-*** DONE Blog themes
-CLOSED: [2023-05-10 Wed 22:17]
-at least light/dark mode
-**** Auto dark mode
 
 *** TODO Use tail-wind CSS rewrite
