@@ -34,7 +34,7 @@ export default function Post({ post }) {
     </Layout>
   );
 }
-// TODO add category ,tags pages
+// TODO Add Creative Commons,Comment
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
     "title",
