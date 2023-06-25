@@ -41,13 +41,6 @@ export default function Banner() {
           </Link>
         </li>
         <li className={styles.listItem}>
-          <Link href={""}>
-            &nbsp;
-            <FontAwesomeIcon icon={faTwitter} />
-            &nbsp;Twitter
-          </Link>
-        </li>
-        <li className={styles.listItem}>
           <Link href={"https://github.com/pang-lan"}>
             &nbsp;
             <FontAwesomeIcon icon={faGithub} />
