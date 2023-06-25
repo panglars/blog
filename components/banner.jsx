@@ -7,7 +7,6 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTelegram, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faRss } from "@fortawesome/free-solid-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 config.autoAddCss = false;
 
 const Title = "PangLan's Blog";

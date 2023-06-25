@@ -86,10 +86,10 @@ function ThemeButton() {
   }
   return (
     <>
-      <Link href="javascript:void(0)" onClick={toggleTheme}>
+      <button onClick={toggleTheme} className="button">
         {themeicon}
         {" " + theme}
-      </Link>
+      </button>
     </>
   );
 }

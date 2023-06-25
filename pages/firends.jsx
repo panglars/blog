@@ -1,11 +1,11 @@
 import Layout from "../components/layout";
-import Styles from "../components/firends.module.scss";
+import Link from "next/link";
 
 export default function Firends() {
   const poly000Data = {
     title: "poly000",
     favicon: "https://poly000.github.io/android-chrome-512x512.png",
-    link: "https://poly000.github.io",
+    url: "https://poly000.github.io",
     descriptions: "Poly000客栈",
   };
   return (
@@ -17,13 +17,11 @@ export default function Firends() {
 }
 // TODO Add firends components
 
-function Firend({ title, favicon, link, description }) {
+function Firend({ title, favicon, url, description }) {
   return (
-    <div>
+    <>
       <h2>{title}</h2>
-      <img src={favicon} alt="Favicon" />
-      <a href={link}>{link}</a>
-      <p>{description}</p>
-    </div>
+      <Link href={url}>{description}</Link>
+    </>
   );
 }
