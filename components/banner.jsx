@@ -34,7 +34,7 @@ export default function Banner() {
       <p className={styles.lightText}>{subTitle}</p>
       <ul className={styles.list}>
         <li className={styles.listItem}>
-          <Link href={"https://t.me/wc_bing"}>
+          <Link href={"https://t.me/xuandabing"}>
             &nbsp;
             <FontAwesomeIcon icon={faTelegram} />
             &nbsp;Telegram
@@ -48,7 +48,7 @@ export default function Banner() {
           </Link>
         </li>
         <li className={styles.listItem}>
-          <Link href={"https://github.com/Fogberry"}>
+          <Link href={"https://github.com/pang-lan"}>
             &nbsp;
             <FontAwesomeIcon icon={faGithub} />
             &nbsp;Github
