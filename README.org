@@ -3,8 +3,3 @@
 ** Feature
 
 
-** Todo [0%]
-*** TODO App router
-*** TODO data fatch
-*** TODO index page
-*** TODO article page

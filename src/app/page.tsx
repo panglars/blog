@@ -3,7 +3,7 @@ import { getAllPosts } from "../lib/posts";
 
 export default async function Page() {
   const allPosts = await getPostInfo();
-  //console.log(allPosts);
+  // console.log(allPosts);
   return (
     <>
       <h1 className="text-center text-2xl font-sans m-2">
@@ -15,6 +15,9 @@ export default async function Page() {
           <li className="list-item" key={post.date}>
             <div>
               <Link href={`/post/${post.slug}`}>{post.title}</Link>
+              <p>
+                {post.date} {post.language} {post.category}
+              </p>
             </div>
           </li>
         ))}
@@ -31,7 +34,7 @@ async function getPostInfo() {
     "title",
     "date",
     "slug",
-    "author",
+    "language",
     "category",
     "tags",
     "content",
