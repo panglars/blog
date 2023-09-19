@@ -20,7 +20,7 @@ async function getPost(params) {
 }
 export default async function Post({ params }) {
   const post = await getPost(params);
-  console.log(post);
+  // console.log(post);
   return (
     <>
       <PostBody content={post.content} />
