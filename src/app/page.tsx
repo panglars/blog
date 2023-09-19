@@ -6,22 +6,24 @@ export default async function Page() {
   // console.log(allPosts);
   return (
     <>
-      <h1 className="text-center text-2xl font-sans m-2">{`Hello,I'm Pang LAN`}</h1>
+      <h1 className="text-center text-3xl font-sans m-2">{`Hello,I'm Pang LAN`}</h1>
       <h2 className="text-center text-xl">都不知道该干什么</h2>
       <ul className="">
         {allPosts.map((post) => (
           <li className="list-item" key={post.date}>
             <div>
-              <Link href={`/post/${post.slug}`}>{post.title}</Link>
-              <p>
-                {post.date} {post.language} {post.category}
-              </p>
+              <Link href={`/post/${post.slug}`} className="text-2xl">
+                {post.title}
+              </Link>
+              <div className="text-right text-xl mr-5">
+                {post.date} {post.category}
+              </div>
             </div>
           </li>
         ))}
       </ul>
-      <Link href="/about" className="text-left">
-        About{" "}
+      <Link href="/about" className="text-2xl">
+        About
       </Link>
     </>
   );

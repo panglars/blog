@@ -1,7 +1,6 @@
 import PostBody from "../../../components/postbody";
 import Link from "next/link";
 import { getAllPosts, getPostBySlug } from "../../../lib/posts";
-import { AppProps } from "next/app";
 
 export async function generateStaticParams() {
   const posts = getAllPosts(["slug"]);
@@ -19,13 +18,18 @@ async function getPost(params: any) {
   ]);
   return post;
 }
+
 export default async function Post({ params }: any) {
   const post = await getPost(params);
   // console.log(post);
   return (
     <>
+      <h1 className="text-center text-3xl">{post.title}</h1>
+      <p className="text-center text-xl">
+        {post.category} {post.date}
+      </p>
       <PostBody content={post.content} />
-      <Link href="/" className="text-right">
+      <Link href="/" className="text-xl font-bold m-5">
         Go back
       </Link>
     </>
