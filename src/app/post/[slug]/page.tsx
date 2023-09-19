@@ -1,12 +1,13 @@
 import PostBody from "../../../components/postbody";
 import Link from "next/link";
 import { getAllPosts, getPostBySlug } from "../../../lib/posts";
+import { AppProps } from "next/app";
 
-export async function generateStaicParams() {
+export async function generateStaticParams() {
   const posts = getAllPosts(["slug"]);
-  return { posts };
+  return posts;
 }
-async function getPost(params) {
+async function getPost(params: any) {
   const post = getPostBySlug(params.slug, [
     "title",
     "date",
@@ -18,7 +19,7 @@ async function getPost(params) {
   ]);
   return post;
 }
-export default async function Post({ params }) {
+export default async function Post({ params }: any) {
   const post = await getPost(params);
   // console.log(post);
   return (
