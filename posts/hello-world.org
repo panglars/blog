@@ -13,18 +13,29 @@ This is my first post,and under is some stylesheet to test my blog.
 **** H4
 ***** H5
 
-** List
-- 0
-+ 0
-1) 1
-2) 2
+** Lists
++ item 1
++ item 2
+  1.item2.1
+  2.item2.2 
    
 ** Emphasize
-*Blod* _underline_ =monofont= +deleteline+ /italics/
+*Blod* _underline_ ~code~ =verbatim= /italics/ +strike-through+
 
-** Code block
+** HyperLink
+Regular Link: [[https://tailwindcss.com][Tailwindcss]]
+
+Plain Link: https://react.dev
+
+** Blocks
 #+begin_src elisp
   (string (char-after 1))
   ⇒ "@"
   
 #+end_src
+
+** Tables
+| heading 1 | heading 2 |
+|-----------+-----------|
+| item1     | item2     |
+| item2     | item3     |

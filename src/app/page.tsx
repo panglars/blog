@@ -6,8 +6,8 @@ export default async function Page() {
   // console.log(allPosts);
   return (
     <>
-      <h1 className="text-center text-3xl font-sans m-2">{`Hello,I'm Pang LAN`}</h1>
-      <h2 className="text-center text-xl">都不知道该干什么</h2>
+      <h1 className="text-center text-4xl leading-snug mb-4">{`Hello,I'm Pang LAN`}</h1>
+      <h2 className="text-center text-2xl">都不知道该干什么</h2>
       <ul className="">
         {allPosts.map((post) => (
           <li className="list-item" key={post.date}>
