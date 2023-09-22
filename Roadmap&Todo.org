@@ -1,6 +1,7 @@
 * Todo 
 ** UI/UX
-*** Icon
+*** DONE Icon
+CLOSED: [2023-09-22 Fri 15:06]
 
 *** Slogn
 
@@ -15,6 +16,7 @@ Style like https://orgmode.org , left is langruage button,right is light/night s
 *** TODO Top bar
 
 *** TODO Post Page
+**** Image
 
 ** Fundmental
 
