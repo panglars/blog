@@ -15,7 +15,7 @@ export default async function Page() {
               <Link href={`/post/${post.slug}`} className="text-2xl ml-8">
                 {post.title}
               </Link>
-              <div className="text-right text-xl m-8">
+              <div className="text-right text-xl mx-8">
                 {post.date}
                 {post.category}
               </div>

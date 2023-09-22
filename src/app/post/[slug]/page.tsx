@@ -26,7 +26,7 @@ export default async function Post({ params }: any) {
     <>
       <h1 className="text-center text-3xl">{post.title}</h1>
       <p className="text-center text-xl">
-        {post.category} {post.date}
+        {post.category} {post.date} {post.language} {post.tag}
       </p>
       <PostBody content={post.content} />
       <Link href="/" className="text-xl font-bold m-5">
