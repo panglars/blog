@@ -3,6 +3,8 @@
 *** DONE Icon
 CLOSED: [2023-09-22 Fri 15:06]
 
+*** Basic color
+
 *** Slogn
 
 *** DONE PostCSS/Taildwind
@@ -10,6 +12,9 @@ CLOSED: [2023-09-19 Tue 20:55]
 
 *** TopBar
 Style like https://orgmode.org , left is langruage button,right is light/night switch button, center is title .Category,about me,firends and tags around the slogn.
+**** Mobile design 
+
+*** FootBar
 
 *** TODO Index page
 
@@ -23,3 +28,7 @@ Style like https://orgmode.org , left is langruage button,right is light/night s
 *** TODO RSS
 
 *** TODO Comment 
+
+*** TODO Utility script
+
+*** TODO Environment file

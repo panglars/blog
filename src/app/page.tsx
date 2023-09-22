@@ -12,19 +12,17 @@ export default async function Page() {
         {allPosts.map((post) => (
           <li className="list-item" key={post.date}>
             <div>
-              <Link href={`/post/${post.slug}`} className="text-2xl">
+              <Link href={`/post/${post.slug}`} className="text-2xl ml-8">
                 {post.title}
               </Link>
-              <div className="text-right text-xl mr-5">
-                {post.date} {post.category}
+              <div className="text-right text-xl m-8">
+                {post.date}
+                {post.category}
               </div>
             </div>
           </li>
         ))}
       </ul>
-      <Link href="/about" className="text-2xl">
-        About
-      </Link>
     </>
   );
 }
