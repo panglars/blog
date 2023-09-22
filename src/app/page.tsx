@@ -5,17 +5,17 @@ export default async function Page() {
   const allPosts = await getPostInfo();
   // console.log(allPosts);
   return (
-    <>
-      <h1 className="text-center text-4xl leading-snug mb-4">{`Hello,I'm Pang LAN`}</h1>
+    <div className="max-w-4xl mx-auto">
+      <h1 className="text-center text-4xl leading-snug ">{`Hello,I'm Pang LAN`}</h1>
       <h2 className="text-center text-2xl">都不知道该干什么</h2>
-      <ul className="">
+      <ul className="my-10">
         {allPosts.map((post) => (
           <li className="list-item" key={post.date}>
             <div>
-              <Link href={`/post/${post.slug}`} className="text-2xl ml-8">
+              <Link href={`/post/${post.slug}`} className="text-2xl">
                 {post.title}
               </Link>
-              <div className="text-right text-xl mx-8">
+              <div className="text-right text-xl ">
                 {post.date}
                 {post.category}
               </div>
@@ -23,7 +23,7 @@ export default async function Page() {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 
