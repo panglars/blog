@@ -1,7 +1,14 @@
 * Todo 
-** UI/UX 
+** UI/UX
+*** Icon
+
+*** Slogn
+
 *** DONE PostCSS/Taildwind
 CLOSED: [2023-09-19 Tue 20:55]
+
+*** TopBar
+Style like https://orgmode.org , left is langruage button,right is light/night switch button, center is title .Category,about me,firends and tags around the slogn.
 
 *** TODO Index page
 
