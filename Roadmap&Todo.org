@@ -12,9 +12,11 @@ CLOSED: [2023-09-19 Tue 20:55]
 
 *** TopBar
 Style like https://orgmode.org , left is langruage button,right is light/night switch button, center is title .Category,about me,firends and tags around the slogn.
+
 **** Mobile design 
 
-*** FootBar
+*** DONE FootBar
+CLOSED: [2023-09-24 Sun 22:21]
 
 *** TODO Index page
 
