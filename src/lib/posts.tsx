@@ -31,19 +31,14 @@ export function getPostBySlug(
       items[field] = org.data[field];
     }
   });
-
+  items["date"] = String(items["date"]).replace(
+    /^<(\d{4}-\d{2}-\d{2}) \w{3}>$/,
+    "$1"
+  );
+  //console.log(items);
   return items;
 }
 
-// export function getAllPosts(fields: string[] = []): Record<string, any>[] {
-//   const slugs = getPostSlugs();
-//   const posts = slugs
-//     .map((slug) => getPostBySlug(slug, fields))
-//     // sort posts by date in descending order
-//     .sort((post1, post2) => (post1.date > post2.date ? "-1" : "1"));
-//   return posts;
-// }
-//
 export function getAllPosts(fields: string[] = []): Record<string, any>[] {
   const slugs = getPostSlugs();
   const posts = slugs

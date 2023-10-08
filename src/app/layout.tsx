@@ -8,8 +8,8 @@ import Headers from "../components/headers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pang LAN ",
-  description: "FANTASTIC,but noting",
+  title: process.env.TITLE,
+  description: process.env.SUBTITLE,
 };
 
 export default function RootLayout({
