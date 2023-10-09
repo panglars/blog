@@ -36,5 +36,3 @@ next-env.d.ts
 /.wakatime-project
 /.idea/
 
-#Feed
-/public/rss.xml

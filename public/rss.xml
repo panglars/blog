@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>PangLAN's Blog</title>
+        <link>https://yinn.party</link>
+        <description>PangLAN's Blog</description>
+        <lastBuildDate>Mon, 09 Oct 2023 01:45:07 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <copyright>All rights reserved 2023,@PangLAN</copyright>
+        <item>
+            <title><![CDATA[Hello world!]]></title>
+            <link>https://yinn.party/post/hello-world</link>
+            <guid>https://yinn.party/post/hello-world</guid>
+            <pubDate>Tue, 19 Sep 2023 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<p>Hello world!
+</p><p>This is my first post,and under is some stylesheet to test my blog.
+</p><h1>H1 </h1><h2>H2</h2><h3>H3</h3><h4>H4</h4><h5>H5</h5><h2>Lists</h2><ul><li><p>item 1
+</p></li><li><p>item 2
+  1.item2.1
+  2.item2.2 
+</p></li></ul><h2>Emphasize</h2><p><strong>Blod</strong> <span class="underline" style="text-decoration: underline;">underline</span> <code class="inline-code">code</code> <code class="inline-verbatim">verbatim</code> <em>italics</em> <del>strike-through</del></p><h2>HyperLink</h2><p>Regular Link: <a href="https://tailwindcss.com">Tailwindcss</a></p><p>Plain Link: <a href="https://react.dev">https://react.dev</a></p><h2>Blocks</h2><pre class="src-block"><code class="language-elisp">(string (char-after 1))
+⇒ "@"
+
+</code></pre><h2>Tables</h2><table><thead><tr><th>heading 1</th><th>heading 2</th></tr></thead><tbody><tr><td>item1</td><td>item2</td></tr><tr><td>item2</td><td>item3</td></tr></tbody></table>]]></content:encoded>
+            <author>i@yinn.party (PangLAN)</author>
+        </item>
+    </channel>
+</rss>
