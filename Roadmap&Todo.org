@@ -27,10 +27,12 @@ CLOSED: [2023-09-24 Sun 22:21]
 
 ** Fundmental
 
-*** TODO RSS
+*** DONE RSS
+CLOSED: [2023-10-09 Mon 09:48]
 
 *** TODO Comment 
 
 *** TODO Utility script
 
-*** TODO Environment file
+*** DONE Environment file
+CLOSED: [2023-10-09 Mon 09:48]
