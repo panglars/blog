@@ -27,12 +27,22 @@ Regular Link: [[https://tailwindcss.com][Tailwindcss]]
 
 Plain Link: https://react.dev
 
-
 ** Blocks
-#+begin_src elisp
-  (string (char-after 1))
-  ⇒ "@"
-  
+#+begin_src python
+  import imaplib 
+   import ssl 
+ 
+   def imap_by_ssl(imapserver, user, passwd): 
+       Context = ssl.create_default_context() 
+       with imaplib.IMAP4_SSL(imapserver, ssl_context=Context) as server: 
+           server.login(user, passwd) 
+           server.select() 
+           typ, data = server.search(None, 'ALL') 
+           for num in data[0].split(): 
+               typ, data = server.fetch(num, '(RFC822)') 
+               print('Message %s\n%s\n' % (num, data[0][1])) 
+           server.close() 
+           server.logout() 
 #+end_src
 
 ** Tables

@@ -18,7 +18,7 @@
 .org ul,
 .org ol,
 .org blockquote {
-  @apply my-6;
+  @apply my-2 text-xl;
 }
 
 .org ul,

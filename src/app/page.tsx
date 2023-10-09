@@ -7,8 +7,12 @@ export default async function Page() {
   // console.log(allPosts);
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-center text-4xl leading-snug ">{`Hello,I'm Pang LAN`}</h1>
+      <h1 className="text-center text-4xl leading-snug my-4">{`Hello,I'm Pang LAN`}</h1>
       <h2 className="text-center text-2xl">{process.env.SUBTITLE}</h2>
+      <p className="flex items-center my-8 text-xl">
+        <Link href="https://github.com/pang-lan">Github</Link>
+        <Link href="https://t.me/xuandabing">Telegram</Link>
+      </p>
       <ul className="my-10">
         {allPosts.map((post) => (
           <li className="list-item" key={post.date}>
