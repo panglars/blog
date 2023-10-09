@@ -11,6 +11,7 @@ export default function Headers() {
         <Link href="/about">About</Link>
         <Link href="/friends">Friends</Link>
         <Link href="/tags">Tags</Link>
+        <Link href="/rss.xml">RSS</Link>
       </div>
     </nav>
   );
