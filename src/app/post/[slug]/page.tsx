@@ -29,9 +29,6 @@ export default async function Post({ params }: any) {
         {post.category} {post.date} {post.language} {post.tag}
       </p>
       <PostBody content={post.content} />
-      <Link href="/" className="text-xl font-bold m-5">
-        Go back
-      </Link>
     </>
   );
 }
