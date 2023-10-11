@@ -1,5 +1,5 @@
 import fs from "fs";
-import { join } from "path";
+import {join} from "path";
 import orgToHtml from "./orgToHtml";
 
 const postsDirectory = join(process.cwd(), "posts");
@@ -41,8 +41,7 @@ export function getPostBySlug(
 
 export function getAllPosts(fields: string[] = []): Record<string, any>[] {
   const slugs = getPostSlugs();
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return posts;
+  return slugs
+      .map((slug) => getPostBySlug(slug, fields))
+      .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 }

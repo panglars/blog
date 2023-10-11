@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { getAllPosts } from "../../lib/posts";
+import {getAllPosts} from "@/lib/posts";
 
 export default async function Page() {
   const allPosts = await getPostInfo();
@@ -12,7 +11,7 @@ export default async function Page() {
 }
 
 async function getPostInfo() {
-  const allPosts = getAllPosts([
+  return getAllPosts([
     "title",
     "date",
     "slug",
@@ -21,5 +20,4 @@ async function getPostInfo() {
     "tags",
     "content",
   ]);
-  return allPosts;
 }

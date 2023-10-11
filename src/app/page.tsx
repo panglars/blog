@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { getAllPosts } from "../lib/posts";
-import { generateRSS } from "../lib/rss";
+import { getAllPosts } from "@/lib/posts";
+import { generateRSS } from "@/lib/rss";
 
 export default async function Page() {
   const allPosts = await getPostInfo();
@@ -34,15 +34,16 @@ export default async function Page() {
 }
 
 async function getPostInfo() {
-  const allPosts = getAllPosts([
-    "title",
-    "date",
-    "slug",
-    "language",
-    "category",
-    "tags",
-    "content",
-  ]);
+    let allPosts: Record<string, any>[];
+    allPosts = getAllPosts([
+        "title",
+        "date",
+        "slug",
+        "language",
+        "category",
+        "tags",
+        "content",
+    ]);
   await generateRSS();
   return allPosts;
 }

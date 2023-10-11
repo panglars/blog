@@ -1,4 +1,4 @@
-import { unified } from "unified";
+import {unified} from "unified";
 import html from "rehype-stringify";
 
 import uniorg from "uniorg-parse";
@@ -13,6 +13,5 @@ const processor = unified()
   .use(html);
 
 export default function orgToHtml(org: any) {
-  const result = processor.processSync(org);
-  return result;
+  return processor.processSync(org);
 }

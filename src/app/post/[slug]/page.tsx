@@ -1,22 +1,19 @@
 import PostBody from "../../../components/postbody";
-import Link from "next/link";
-import { getAllPosts, getPostBySlug } from "../../../lib/posts";
+import {getAllPosts, getPostBySlug} from "@/lib/posts";
 
 export async function generateStaticParams() {
-  const posts = getAllPosts(["slug"]);
-  return posts;
+    return getAllPosts(["slug"]);
 }
 async function getPost(params: any) {
-  const post = getPostBySlug(params.slug, [
-    "title",
-    "date",
-    "slug",
-    "language",
-    "category",
-    "tags",
-    "content",
+    return getPostBySlug(params.slug, [
+      "title",
+      "date",
+      "slug",
+      "language",
+      "category",
+      "tags",
+      "content",
   ]);
-  return post;
 }
 
 export default async function Post({ params }: any) {
