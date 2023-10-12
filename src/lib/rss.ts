@@ -1,17 +1,18 @@
 import { Feed } from "feed";
 import fs from "fs";
 import { getAllPosts } from "./posts";
+import siteConfig from "../siteConfig";
 
 export const generateRSS = async () => {
   const feed = new Feed({
-    title: process.env.TITLE!,
-    description: process.env.DESCRIPTION,
-    id: process.env.SITEURL!,
-    link: process.env.SITEURL,
+    title: siteConfig.TITLE,
+    description: siteConfig.DESCRIPTION,
+    id: siteConfig.SITEURL,
+    link: siteConfig.SITEURL,
     copyright: "All rights reserved 2023,@PangLAN",
     author: {
-      name: process.env.AUTHOR,
-      email: process.env.EMAIL,
+      name: siteConfig.NAME,
+      email: siteConfig.EMAIL,
     },
   });
   const allPosts = getAllPosts([
@@ -29,13 +30,13 @@ export const generateRSS = async () => {
       //utcdate = Date(post.date).toUTCString();
       feed.addItem({
         title: post.title,
-        id: process.env.SITEURL + "/post/" + post.slug,
-        link: process.env.SITEURL + "/post/" + post.slug,
+        id: siteConfig.SITEURL + "/post/" + post.slug,
+        link: siteConfig.SITEURL + "/post/" + post.slug,
         content: post.content,
         author: [
           {
-            name: process.env.NAME!,
-            email: process.env.EMAIL!,
+            name: siteConfig.NAME,
+            email: siteConfig.EMAIL,
           },
         ],
         date: utcdate,
