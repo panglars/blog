@@ -29,12 +29,12 @@ export default function CommentBox({
               Signed in as {session.user?.name}
             </span>
             <button
-              className="border-none"
+              className="border-none border-0"
               onClick={() => signOut({ redirect: false })}
             >
               Sign Out
             </button>
-            <button className="border-none">Post</button>
+            <button className="border-none border-0">Post</button>
           </div>
         </div>
       </form>
@@ -49,7 +49,7 @@ export default function CommentBox({
       ></textarea>
       <div className="flex justify-between text-xl font-bold mt-4">
         <span className="text-red-400">Not Sign in</span>
-        <button className="border-none" onClick={() => signIn()}>
+        <button className="border-none border-0" onClick={() => signIn()}>
           Sign In
         </button>
       </div>
