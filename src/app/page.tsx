@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 import { generateRSS } from "@/lib/rss";
+import siteConfig from "../siteConfig";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: siteConfig.TITLE,
+  description: siteConfig.DESCRIPTION,
+};
 
 export default async function Page() {
   const allPosts = await getPostInfo();

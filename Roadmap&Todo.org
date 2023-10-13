@@ -18,13 +18,6 @@ Style like https://orgmode.org , left is langruage button,right is light/night s
 *** DONE FootBar
 CLOSED: [2023-09-24 Sun 22:21]
 
-*** TODO Index page
-
-*** TODO Top bar
-
-*** TODO Post Page
-**** Image
-
 ** Fundmental
 
 *** DONE RSS
