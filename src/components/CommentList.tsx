@@ -50,7 +50,7 @@ const CommentList = ({ comments, onDelete }: CommentListProps) => {
                       onClick={() => onDelete(comment)}
                       aria-label="Close"
                     >
-                      x
+                      Delete
                     </button>
                   )}
                 </div>

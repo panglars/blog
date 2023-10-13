@@ -1,6 +1,6 @@
 "use client";
 
-import { useSession, signIn } from "next-auth/react";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 type CommentFormProps = {
   text: string;
@@ -17,28 +17,42 @@ export default function CommentBox({
   if (session) {
     return (
       <form onSubmit={onSubmit}>
-        <div className="flex flex-col items-center mt-10">
+        <div className="mt-10 px-2.5">
           <textarea
             placeholder="Let us know what you think!"
-            className="px-4 text-black resize"
+            className="block w-full rounded-lg border-none bg-inherit text-gray-900"
             onChange={(e) => setText(() => e.target.value)}
             value={text}
           ></textarea>
-          <button className="border mt-6 rounded px-3">Post!</button>
+          <div className="flex justify-between text-xl font-bold">
+            <span className="text-green-400">
+              Signed in as {session.user?.name}
+            </span>
+            <button
+              className="border-none"
+              onClick={() => signOut({ redirect: false })}
+            >
+              Sign Out
+            </button>
+            <button className="mt-6 px-3 border-none">Post</button>
+          </div>
         </div>
       </form>
     );
   }
   return (
-    <div className="flex flex-col items-center mt-10">
+    <div className="mt-10 px-2.5">
       <textarea
         placeholder="Please SignIn to comment"
-        className="px-4 text-black resize"
+        className="block w-full rounded-lg border-none bg-inherit text-gray-900"
         disabled
       ></textarea>
-      <button className="border mt-6 rounded px-3" onClick={() => signIn()}>
-        SignIn
-      </button>
+      <div className="flex justify-between text-xl font-bold">
+        <span className="text-red-400">Not Sign in</span>
+        <button className="border-none" onClick={() => signIn()}>
+          Sign In
+        </button>
+      </div>
     </div>
   );
 }
