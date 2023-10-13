@@ -18,7 +18,7 @@ const CommentList = ({ comments, onDelete }: CommentListProps) => {
   const { data: session } = useSession();
   const user = session?.user;
   return (
-    <div className="space-y-6 mt-10 w-full flex flex-col">
+    <div className="space-y-6 mt-10 w-full flex flex-col px-2.5">
       {comments &&
         comments.map((comment) => {
           const isAuthor = user && user.sub === comment.user.sub;
@@ -39,7 +39,7 @@ const CommentList = ({ comments, onDelete }: CommentListProps) => {
                       onClick={() => onDelete(comment)}
                       aria-label="Close"
                     >
-                      Delete
+                      del
                     </button>
                   )}
                 </div>

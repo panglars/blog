@@ -20,19 +20,23 @@ export default function CommentBox({
         <div className="mt-10 px-2.5">
           <textarea
             placeholder="Let us know what you think!"
-            className="block w-full rounded-lg border-none bg-inherit text-gray-900"
+            className="block w-full rounded-lg border-none bg-inherit"
             onChange={(e) => setText(() => e.target.value)}
             value={text}
           ></textarea>
           <div className="flex justify-between text-xl font-bold mt-4">
-            <span className="">Signed in as {session.user?.name}</span>
+            <span className="text-gray-500">
+              Signed in as {session.user?.name}
+            </span>
             <button
-              className="border-none border-0"
+              className="border-none border-0 hover:text-red-500"
               onClick={() => signOut({ redirect: false })}
             >
               Sign Out
             </button>
-            <button className="border-none border-0">Post</button>
+            <button className="border-none border-0 hover:text-green-500">
+              Post
+            </button>
           </div>
         </div>
       </form>
@@ -46,8 +50,11 @@ export default function CommentBox({
           disabled
         ></textarea>
         <div className="flex justify-between text-xl font-bold mt-4">
-          <span className="">Not Sign in</span>
-          <button className="border-none border-0" onClick={() => signIn()}>
+          <span className="text-gray-500">Not Sign in</span>
+          <button
+            className="border-none border-0 hover:text-green-500"
+            onClick={() => signIn()}
+          >
             Sign In
           </button>
         </div>
