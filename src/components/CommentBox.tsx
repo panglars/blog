@@ -24,7 +24,7 @@ export default function CommentBox({
             onChange={(e) => setText(() => e.target.value)}
             value={text}
           ></textarea>
-          <div className="flex justify-between text-xl font-bold">
+          <div className="flex justify-between text-xl font-bold mt-4">
             <span className="text-green-400">
               Signed in as {session.user?.name}
             </span>
@@ -34,7 +34,7 @@ export default function CommentBox({
             >
               Sign Out
             </button>
-            <button className="mt-6 px-3 border-none">Post</button>
+            <button className="border-none">Post</button>
           </div>
         </div>
       </form>
@@ -47,7 +47,7 @@ export default function CommentBox({
         className="block w-full rounded-lg border-none bg-inherit text-gray-900"
         disabled
       ></textarea>
-      <div className="flex justify-between text-xl font-bold">
+      <div className="flex justify-between text-xl font-bold mt-4">
         <span className="text-red-400">Not Sign in</span>
         <button className="border-none" onClick={() => signIn()}>
           Sign In
