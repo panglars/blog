@@ -1,18 +1,21 @@
 import Link from "next/link";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export default function Headers() {
   return (
-    <nav className="flex justify-between items-center p-8 text-2xl">
-      <Link href="/" className="font-bold">
-        PangLAN
-      </Link>
-      <div className="space-x-4">
-        <Link href="/category">Category</Link>
-        <Link href="/about">About</Link>
-        <Link href="/friends">Friends</Link>
-        <Link href="/tags">Tags</Link>
-        <Link href="/rss.xml">RSS</Link>
+    <header>
+      <div className="flex items-center justify-between">
+        <ModeToggle />
+        {
+          // TODO language toggle components
+          // TODO RSS icon
+        }
+        <nav className="ml-auto font-medium space-x-6">
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
+          <Link href="/rss.xml">RSS</Link>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }
