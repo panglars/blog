@@ -18,13 +18,21 @@ export default async function Page() {
       <div className="prose dark:prose-invert">
         {allPosts.map((post) => (
           <article key={post.slug} className="mb-8">
-            <Link href={`/post/${post.slug}`} className="text-2xl">
-              <h2>{post.title}</h2>
-            </Link>
-            {post.date && <p className="text-right text-xl">{post.date}</p>}
-            {post.category && (
-              <p className="text-right text-xl">{post.category}</p>
-            )}
+            <h2 className="text-3xl font-semibold tracking-tighter">
+              <Link href={`/post/${post.slug}`}>{post.title}</Link>
+            </h2>
+            <div className="flex justify-between">
+              {post.category && (
+                <p className="font-serif italic tracking-tighter text-xl">
+                  {post.category}
+                </p>
+              )}
+              {post.date && (
+                <p className="font-serif italic tracking-tighter text-xl">
+                  {post.date}
+                </p>
+              )}
+            </div>
           </article>
         ))}
       </div>

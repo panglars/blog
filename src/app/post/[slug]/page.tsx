@@ -35,10 +35,13 @@ export default async function Post({ params }: Props) {
   const post = await getPost(params);
   return (
     <>
-      <h1 className="text-center text-3xl">{post.title}</h1>
-      <p className="text-center text-xl">
-        {post.category} {post.date} {post.language} {post.tag}
-      </p>
+      <h1 className="text-3xl mt-12 mb-3 font-semibold">{post.title}</h1>
+      <div className="grid justify-items-end mb-12 font-serif italic text-xl tracking-tighter">
+        <div>Category:{post.category}</div>
+        <div>Date:{post.date}</div>
+        <div>Langruage:{post.language}</div>
+        <div>Tags:{post.tags}</div>
+      </div>
       <PostBody content={post.content} />
     </>
   );
