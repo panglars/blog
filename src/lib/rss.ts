@@ -27,7 +27,7 @@ export const generateRSS = async () => {
   await Promise.all(
     allPosts.map(async (post) => {
       let utcdate = new Date(post.date);
-      //utcdate = Date(post.date).toUTCString();
+      // utcdate = Date(post.date).toUTCString();
       feed.addItem({
         title: post.title,
         id: siteConfig.SITEURL + "/post/" + post.slug,
