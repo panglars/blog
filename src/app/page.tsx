@@ -10,7 +10,7 @@ export default async function Page() {
       <h1 className="text-center text-4xl leading-snug my-8">{`Hello,I'm Pang LAN`}</h1>
       <div className="prose dark:prose-invert">
         {allPosts.map((post) => (
-          <article key={post.slug}>
+          <article key={post.slug} className="mb-8">
             <Link href={`/post/${post.slug}`} className="text-2xl">
               <h2>{post.title}</h2>
             </Link>
