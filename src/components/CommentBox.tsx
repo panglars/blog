@@ -25,9 +25,7 @@ export default function CommentBox({
             value={text}
           ></textarea>
           <div className="flex justify-between text-xl font-bold mt-4">
-            <span className="text-green-400">
-              Signed in as {session.user?.name}
-            </span>
+            <span className="">Signed in as {session.user?.name}</span>
             <button
               className="border-none border-0"
               onClick={() => signOut({ redirect: false })}
@@ -39,20 +37,20 @@ export default function CommentBox({
         </div>
       </form>
     );
-  }
-  return (
-    <div className="mt-10 px-2.5">
-      <textarea
-        placeholder="Please SignIn to comment"
-        className="block w-full rounded-lg border-none bg-inherit text-gray-900"
-        disabled
-      ></textarea>
-      <div className="flex justify-between text-xl font-bold mt-4">
-        <span className="text-red-400">Not Sign in</span>
-        <button className="border-none border-0" onClick={() => signIn()}>
-          Sign In
-        </button>
+  } else
+    return (
+      <div className="mt-10 px-2.5">
+        <textarea
+          placeholder="Please SignIn to comment"
+          className="block w-full rounded-lg border-none bg-inherit text-gray-900"
+          disabled
+        ></textarea>
+        <div className="flex justify-between text-xl font-bold mt-4">
+          <span className="">Not Sign in</span>
+          <button className="border-none border-0" onClick={() => signIn()}>
+            Sign In
+          </button>
+        </div>
       </div>
-    </div>
-  );
+    );
 }

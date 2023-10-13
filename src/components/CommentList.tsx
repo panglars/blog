@@ -1,6 +1,5 @@
 "use client";
 import type { Comment } from "../interfaces/interfaces";
-import Image from "next/image";
 import { useSession } from "next-auth/react";
 import formatDistanceToNowStrict from "date-fns/formatDistanceToNowStrict";
 
@@ -19,7 +18,7 @@ const CommentList = ({ comments, onDelete }: CommentListProps) => {
   const { data: session } = useSession();
   const user = session?.user;
   return (
-    <div className="space-y-6 mt-10 w-full flex flex-col items-center">
+    <div className="space-y-6 mt-10 w-full flex flex-col">
       {comments &&
         comments.map((comment) => {
           const isAuthor = user && user.sub === comment.user.sub;
@@ -28,16 +27,6 @@ const CommentList = ({ comments, onDelete }: CommentListProps) => {
 
           return (
             <div key={comment.created_at} className="flex space-x-4">
-              <div className="flex-shrink-0">
-                <Image
-                  src={comment.user.picture}
-                  alt={comment.user.name}
-                  width={40}
-                  height={40}
-                  className="rounded-full"
-                />
-              </div>
-
               <div className="flex-grow">
                 <div className="flex space-x-2">
                   <b>{comment.user.name}</b>
