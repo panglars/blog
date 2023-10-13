@@ -1,6 +1,6 @@
-import PostBody from "../../../components/postbody";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import type { Metadata } from "next";
+import PostBody from "@/components/postBody";
 
 type Props = {
   params: { id: string };

@@ -15,6 +15,7 @@
     "@upstash/redis": "^1.23.3",
     "@vercel/analytics": "^1.1.1",
     "autoprefixer": "10.4.14",
+    "date-fns": "^2.30.0",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
     "feed": "^4.2.2",
