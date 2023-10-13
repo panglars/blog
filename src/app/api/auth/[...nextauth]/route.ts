@@ -1,5 +1,13 @@
-import NextAuth from "next-auth";
+import NextAuth, { DefaultSession } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
+
+declare module "next-auth" {
+  interface Session {
+    user: {
+      sub: string;
+    } & DefaultSession["user"];
+  }
+}
 
 const handler = NextAuth({
   providers: [
