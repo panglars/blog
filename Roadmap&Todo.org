@@ -16,6 +16,10 @@ CLOSED: [2023-09-24 Sun 22:21]
 
 ** Fundmental
 
+*** Archive/categery page
+
+*** Site Serach 
+
 *** DONE RSS
 CLOSED: [2023-10-09 Mon 09:48]
 
