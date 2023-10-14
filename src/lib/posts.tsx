@@ -1,5 +1,5 @@
 import fs from "fs";
-import {join} from "path";
+import { join } from "path";
 import orgToHtml from "./orgToHtml";
 
 const postsDirectory = join(process.cwd(), "posts");
@@ -23,25 +23,32 @@ export function getPostBySlug(
   fields.forEach((field) => {
     if (field === "slug") {
       items[field] = realSlug;
-    }
-    if (field === "content") {
+    } else if (field === "content") {
       items[field] = String(org);
     }
-    if (org.data[field]) {
+    // <<1145-14-14 Sat> -> 1145-14-14
+    else if (field === "date") {
+      items[field] = String(org.data[field]).replace(
+        /^<(\d{4}-\d{2}-\d{2}) \w{3}>$/,
+        "$1"
+      );
+    } else if (org.data[field]) {
       items[field] = org.data[field];
     }
   });
-  items["date"] = String(items["date"]).replace(
-    /^<(\d{4}-\d{2}-\d{2}) \w{3}>$/,
-    "$1"
-  );
-  //console.log(items);
+  //  console.log(items);
   return items;
 }
 
 export function getAllPosts(fields: string[] = []): Record<string, any>[] {
   const slugs = getPostSlugs();
   return slugs
-      .map((slug) => getPostBySlug(slug, fields))
-      .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+    .map((slug) => getPostBySlug(slug, fields))
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+}
+
+export function getAllCategory() {
+  const slugs = getPostSlugs();
+  const categorys = slugs.map((slug) => getPostBySlug(slug)["category"]);
+  console.log(categorys);
 }

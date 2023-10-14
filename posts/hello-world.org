@@ -1,17 +1,17 @@
 #+title: Hello world!
 #+date: <2023-09-19 Tue>
 #+category: Test
-#+language: EN
+#+language: English
 
 Hello world!
 
 This is my first post,and under is some stylesheet to test my blog.
 
-* H1 
-** H2
-*** H3
-**** H4
-***** H5
+* Heading 1
+** Heading 2
+*** Heading 3
+**** Heading 4
+***** Heading 5
 
 ** Lists
 + item 1

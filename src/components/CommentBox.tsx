@@ -23,10 +23,10 @@ export default function CommentBox({
   if (session) {
     return (
       <form onSubmit={onSubmit}>
-        <div className="mt-10 px-2.5">
+        <div className="mt-60 px-2.5">
           <textarea
             placeholder="Let us know what you think!"
-            className="block w-full rounded-lg border-none bg-inherit"
+            className="block w-full h-20 rounded-lg border-none bg-inherit"
             onChange={(e) => setText(() => e.target.value)}
             value={text}
           ></textarea>
@@ -53,10 +53,10 @@ export default function CommentBox({
     );
   } else
     return (
-      <div className="mt-10 px-2.5">
+      <div className="mt-60 px-2.5">
         <textarea
           placeholder="Please SignIn to comment"
-          className="block w-full rounded-lg border-none bg-inherit text-gray-900"
+          className="block w-full h-20 rounded-lg border-none bg-inherit text-gray-900"
           disabled
         ></textarea>
         <div className="flex justify-between mt-4">

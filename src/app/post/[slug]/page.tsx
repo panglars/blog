@@ -36,11 +36,27 @@ export default async function Post({ params }: Props) {
   return (
     <>
       <h1 className="text-3xl mt-12 mb-3 font-semibold">{post.title}</h1>
-      <div className="grid justify-items-end mb-12 font-serif italic text-xl tracking-tighter">
-        <div>Category:{post.category}</div>
-        <div>Date:{post.date}</div>
-        <div>Langruage:{post.language}</div>
-        <div>Tags:{post.tags}</div>
+      <div className="mb-12 font-serif italic text-xl tracking-tighter">
+        <div className="flex justify-between">
+          <span> Category</span>
+          <span>{post.category}</span>
+        </div>
+        <div className="flex justify-between">
+          <span>Date</span>
+          <span>{post.date}</span>
+        </div>
+        {post.language && (
+          <div className="flex justify-between">
+            <span>Langruage</span>
+            <span>{post.language}</span>
+          </div>
+        )}
+        {post.tags && (
+          <div className="flex justify-between">
+            <span>Tags</span>
+            <span>{post.tags}</span>
+          </div>
+        )}
       </div>
       <PostBody content={post.content} />
     </>

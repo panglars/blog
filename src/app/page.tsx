@@ -14,7 +14,7 @@ export default async function Page() {
   // console.log(allPosts);
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-center text-4xl leading-snug my-8">{`Hello,I'm Pang LAN`}</h1>
+      <h1 className="text-center text-4xl leading-snug mt-8 mb-20">{`Hello,I'm Pang LAN`}</h1>
       <div className="prose dark:prose-invert">
         {allPosts.map((post) => (
           <article key={post.slug} className="mb-8">

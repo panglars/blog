@@ -9,9 +9,16 @@ export default function Headers() {
           // TODO language toggle components
           // TODO RSS icon
         }
-        <nav className="ml-auto font-medium space-x-6">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
+        <nav className="ml-auto font-semibold space-x-8">
+          <Link href="/" className="hover:text-cyan-500">
+            Home
+          </Link>
+          <Link href="/archive" className="hover:text-cyan-500">
+            Archive
+          </Link>
+          <Link href="/about" className="hover:text-cyan-500">
+            About
+          </Link>
         </nav>
       </div>
     </header>
