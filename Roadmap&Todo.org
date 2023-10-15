@@ -1,24 +1,22 @@
-* Todo 
-** UI/UX
-*** TODO RSS,Theme,Language Icon
-
+* UI/UX
+*** DONE RSS,Theme,Language Icon
+CLOSED: [2023-10-14 Sat 19:27]
 
 *** DONE PostCSS/Taildwind
 CLOSED: [2023-09-19 Tue 20:55]
 
+*** TODO Code Blocks
+
 *** TopBar
 Style like https://orgmode.org , left is langruage button,right is light/night switch button, center is title .Category,about me,firends and tags around the slogn.
 
-**** Mobile design 
+* Fundmental
 
-*** DONE FootBar
-CLOSED: [2023-09-24 Sun 22:21]
+*** TODO Archive/categery page
 
-** Fundmental
+*** TODO Language fitter
 
-*** Archive/categery page
-
-*** Site Serach 
+*** TODO Site Serach 
 
 *** DONE RSS
 CLOSED: [2023-10-09 Mon 09:48]
@@ -26,7 +24,12 @@ CLOSED: [2023-10-09 Mon 09:48]
 *** DONE Comment 
 CLOSED: [2023-10-13 Fri 22:03]
 
-*** TODO Utility script
+*** TODO Pnpm hook for date auto update
 
 *** DONE Environment file
 CLOSED: [2023-10-09 Mon 09:48]
+
+* Mobile design 
+
+
+* Posts script

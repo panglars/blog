@@ -47,7 +47,7 @@ export default async function Post({ params }: Props) {
         </div>
         {post.language && (
           <div className="flex justify-between">
-            <span>Langruage</span>
+            <span>Language</span>
             <span>{post.language}</span>
           </div>
         )}

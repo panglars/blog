@@ -18,7 +18,11 @@
 .org ul,
 .org ol,
 .org blockquote {
-  @apply my-2 text-xl;
+  @apply my-8 text-xl;
+}
+
+.org p {
+  @apply indent-4;
 }
 
 .org ul,

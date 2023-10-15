@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footers() {
   return (
-    <footer className="mx-auto w-full max-w-3xl text-center text-ms tracking-tight mt-20">
+    <footer className="mx-auto w-full max-w-3xl text-center text-ms tracking-tight mt-20 mb-8">
       <div className="container">
         Copyright © 2023 PangLAN. All rights reserved.
       </div>
