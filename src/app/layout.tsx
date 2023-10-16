@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <SessionProvider>
         <body
-          className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
+          className={`antialiased min-h-screen bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 ${inter.className}`}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="max-w-3xl mx-auto py-10 px-4">

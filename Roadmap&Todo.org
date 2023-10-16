@@ -5,6 +5,8 @@ CLOSED: [2023-10-14 Sat 19:27]
 *** DONE PostCSS/Taildwind
 CLOSED: [2023-09-19 Tue 20:55]
 
+*** TODO Basic color and style
+
 *** TODO Code Blocks
 
 *** TopBar

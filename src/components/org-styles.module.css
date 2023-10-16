@@ -44,7 +44,7 @@
 }
 
 .org a {
-  @apply underline duration-200 transition-colors;
+  @apply underline duration-200 transition-colors hover:text-cyan-500;
 }
 
 .org blockquote {
