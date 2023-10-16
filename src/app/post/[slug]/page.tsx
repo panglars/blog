@@ -9,7 +9,6 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // read route params
   const post = await getPost(params);
-
   return {
     title: post.title,
   };
@@ -35,7 +34,9 @@ export default async function Post({ params }: Props) {
   const post = await getPost(params);
   return (
     <>
-      <h1 className="text-3xl mt-12 mb-3 font-semibold">{post.title}</h1>
+      <h1 className="text-3xl mt-12 mb-3 font-semibold text-slate-900 dark:text-slate-100 ">
+        {post.title}
+      </h1>
       <div className="mb-12 font-serif italic text-xl tracking-tighter">
         <div className="flex justify-between">
           <span> Category</span>
