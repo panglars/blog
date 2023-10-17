@@ -28,7 +28,7 @@ const CommentList = ({ comments, onDelete }: CommentListProps) => {
             user && user.email === process.env.NEXT_PUBLIC_AUTH0_ADMIN_EMAIL;
 
           return (
-            <div key={comment.created_at} className="flex space-x-4">
+            <div key={comment.created_at} className="flex space-x-6">
               <div className="flex-grow">
                 <div className="flex space-x-4">
                   <b className="text-slate-900 dark:text-slate-100">
@@ -37,7 +37,7 @@ const CommentList = ({ comments, onDelete }: CommentListProps) => {
                   <time className="">{distanceToNow(comment.created_at)}</time>
                   {(isAdmin || isAuthor) && (
                     <button
-                      className="text-slate-900 dark:text-slate-100 hover:text-red-500 text-right"
+                      className="text-slate-900 dark:text-slate-100 hover:text-red-500"
                       onClick={() => onDelete(comment)}
                       aria-label="Close"
                     >

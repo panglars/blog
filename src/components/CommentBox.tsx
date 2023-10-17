@@ -5,6 +5,7 @@ import {
   faPaperPlane,
   faRightFromBracket,
   faRightToBracket,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
 type CommentFormProps = {
@@ -32,7 +33,7 @@ export default function CommentBox({
           ></textarea>
           <div className="flex justify-between mt-4 ">
             <span className="text-slate-900 dark:text-slate-100">
-              Signed in as {session.user?.name}
+              <FontAwesomeIcon icon={faUser} /> {session.user?.name}
             </span>
             <div className="space-x-6 font-bold">
               <button
