@@ -30,8 +30,8 @@ export default function CommentBox({
             onChange={(e) => setText(() => e.target.value)}
             value={text}
           ></textarea>
-          <div className="flex justify-between mt-4">
-            <span className="text-gray-500">
+          <div className="flex justify-between mt-4 ">
+            <span className="text-slate-900 dark:text-slate-100">
               Signed in as {session.user?.name}
             </span>
             <div className="space-x-6 font-bold">
@@ -60,7 +60,9 @@ export default function CommentBox({
           disabled
         ></textarea>
         <div className="flex justify-between mt-4">
-          <span className="text-gray-500">Sign in to comment</span>
+          <span className="text-slate-900 dark:text-slate-100">
+            Sign in to comment
+          </span>
           <div className="space-x-6 font-bold">
             <button
               className="border-none border-0 hover:text-green-500 space-x-1"

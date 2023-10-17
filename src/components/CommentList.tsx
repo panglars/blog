@@ -2,6 +2,8 @@
 import type { Comment } from "../interfaces/interfaces";
 import { useSession } from "next-auth/react";
 import formatDistanceToNowStrict from "date-fns/formatDistanceToNowStrict";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDeleteLeft } from "@fortawesome/free-solid-svg-icons";
 
 function distanceToNow(dateTime: number | Date) {
   return formatDistanceToNowStrict(dateTime, {
@@ -18,7 +20,7 @@ const CommentList = ({ comments, onDelete }: CommentListProps) => {
   const { data: session } = useSession();
   const user = session?.user;
   return (
-    <div className="space-y-6 mt-10 w-full flex flex-col px-2.5">
+    <div className="space-y-6 mt-16 w-full flex flex-col px-2.5">
       {comments &&
         comments.map((comment) => {
           const isAuthor = user && user.sub === comment.user.sub;
@@ -28,18 +30,18 @@ const CommentList = ({ comments, onDelete }: CommentListProps) => {
           return (
             <div key={comment.created_at} className="flex space-x-4">
               <div className="flex-grow">
-                <div className="flex space-x-2">
-                  <b>{comment.user.name}</b>
-                  <time className="text-gray-400">
-                    {distanceToNow(comment.created_at)}
-                  </time>
+                <div className="flex space-x-4">
+                  <b className="text-slate-900 dark:text-slate-100">
+                    {comment.user.name}
+                  </b>
+                  <time className="">{distanceToNow(comment.created_at)}</time>
                   {(isAdmin || isAuthor) && (
                     <button
-                      className="text-gray-400 hover:text-red-500"
+                      className="text-slate-900 dark:text-slate-100 hover:text-red-500 text-right"
                       onClick={() => onDelete(comment)}
                       aria-label="Close"
                     >
-                      del
+                      <FontAwesomeIcon icon={faDeleteLeft} />
                     </button>
                   )}
                 </div>
