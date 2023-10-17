@@ -3,15 +3,15 @@
 }
 
 .org h1 {
-  @apply text-4xl mt-16 mb-4 leading-snug text-slate-100;
+  @apply text-4xl mt-16 mb-4 leading-snug;
 }
 
 .org h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug text-slate-200;
+  @apply text-3xl mt-12 mb-4 leading-snug;
 }
 
 .org h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug text-slate-300;
+  @apply text-2xl mt-8 mb-4 leading-snug;
 }
 
 .org p,

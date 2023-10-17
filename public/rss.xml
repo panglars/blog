@@ -4,7 +4,7 @@
         <title>PangLAN's Blog</title>
         <link>https://yinn.party</link>
         <description>PangLAN's Blog</description>
-        <lastBuildDate>Tue, 17 Oct 2023 13:21:25 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 17 Oct 2023 13:35:07 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>All rights reserved 2023,@PangLAN</copyright>
@@ -29,7 +29,9 @@
             <pubDate>Tue, 19 Sep 2023 00:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>Hello world!
 </p><p>This is my first post,and under is some stylesheet to test my blog.
-</p><h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h2>Lists</h2><ul><li><p>item 1
+</p><h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><p>The quick brown fox jumps over the lazy dog.
+</p><p>你说的对，但是《原神》是由米哈游自主研发的一款全新开放世界冒险游戏。游戏发生在一个被称作「提瓦特」的幻想世界，在这里，被神选中的人将被授予「神之眼」，导引元素之力。你将扮演一位名为「旅行者」的神秘角色在自由的旅行中邂逅性格各异、能力独特的同伴们，和他们一起击败强敌，找回失散的亲人——同时，逐步发掘「原神」的真相。
+</p><h2>Lists</h2><ul><li><p>item 1
 </p></li><li><p>item 2
   1.item2.1
   2.item2.2 

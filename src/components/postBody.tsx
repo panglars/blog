@@ -8,21 +8,14 @@ import CommentBox from "@/components/CommentBox";
 import CommentList from "@/components/CommentList";
 
 export default function PostBody({ content }: any) {
-  const { setTheme, theme } = useTheme();
+  //const { setTheme, theme } = useTheme();
   const { text, setText, comments, onSubmit, onDelete } = useComment();
   return (
     <div className="max-w-3xl mx-auto">
-      {theme === "light" ? (
-        <div
-          className={orgStyles["org"]}
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
-      ) : (
-        <div
-          className={orgStylesDark["org"]}
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
-      )}
+      <div
+        className={orgStyles["org"]}
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
       <div>
         <CommentBox onSubmit={onSubmit} text={text} setText={setText} />
         <CommentList comments={comments} onDelete={onDelete} />
