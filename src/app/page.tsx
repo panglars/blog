@@ -17,7 +17,7 @@ export default async function Page() {
       <h1 className="text-center text-4xl leading-snug my-16 font-semibold text-slate-900 dark:text-slate-100">{`Hello,I'm Pang LAN`}</h1>
       <div className="prose dark:prose-invert">
         {allPosts.map((post) => (
-          <article key={post.slug} className="mb-8">
+          <div key={post.slug} className="mb-8">
             <h2 className="text-3xl text-slate-900 dark:text-slate-100 font-semibold tracking-tighter my-4">
               <Link href={`/post/${post.slug}`}>{post.title}</Link>
             </h2>
@@ -33,7 +33,7 @@ export default async function Page() {
                 </p>
               )}
             </div>
-          </article>
+          </div>
         ))}
       </div>
     </div>

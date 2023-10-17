@@ -16,7 +16,7 @@ export function getPostBySlug(
   const fullPath = join(postsDirectory, `${realSlug}.org`);
   const content = fs.readFileSync(fullPath, "utf8");
   const org = orgToHtml(content);
-
+  //  console.log(org);
   const items: Record<string, any> = {};
 
   // Ensure only the minimal needed data is exposed

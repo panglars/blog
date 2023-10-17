@@ -12,8 +12,8 @@ export default function PostBody({ content }: any) {
   const { text, setText, comments, onSubmit, onDelete } = useComment();
   return (
     <div className="max-w-3xl mx-auto">
-      <div
-        className={orgStyles["org"]}
+      <article
+        className="prose max-w-none prose-slate dark:prose-invert prose-lg prose-a:underline"
         dangerouslySetInnerHTML={{ __html: content }}
       />
       <div>
