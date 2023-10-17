@@ -1,19 +1,16 @@
 "use client";
 
-import orgStyles from "./org-styles.module.css";
-import orgStylesDark from "./org-styles-dark.module.css";
-import { useTheme } from "next-themes";
 import useComment from "@/components/useComment";
 import CommentBox from "@/components/CommentBox";
 import CommentList from "@/components/CommentList";
 
 export default function PostBody({ content }: any) {
-  //const { setTheme, theme } = useTheme();
   const { text, setText, comments, onSubmit, onDelete } = useComment();
   return (
     <div className="max-w-3xl mx-auto">
       <article
-        className="prose max-w-none prose-slate dark:prose-invert prose-lg prose-a:underline"
+        className="prose max-w-none prose-slate dark:prose-invert prose-lg prose-a:underline
+hover:prose-a:text-cyan-500"
         dangerouslySetInnerHTML={{ __html: content }}
       />
       <div>

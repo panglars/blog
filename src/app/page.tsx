@@ -19,7 +19,9 @@ export default async function Page() {
         {allPosts.map((post) => (
           <div key={post.slug} className="mb-8">
             <h2 className="text-3xl text-slate-900 dark:text-slate-100 font-semibold tracking-tighter my-4">
-              <Link href={`/post/${post.slug}`}>{post.title}</Link>
+              <Link href={`/post/${post.slug}`} className="no-underline">
+                {post.title}
+              </Link>
             </h2>
             <div className="flex justify-between">
               {post.category && (
