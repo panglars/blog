@@ -10,7 +10,7 @@ export default function PostBody({ content }: any) {
     <div className="max-w-3xl mx-auto">
       <article
         className="prose max-w-none prose-slate dark:prose-invert prose-lg prose-a:underline
-hover:prose-a:text-cyan-500"
+hover:prose-a:text-cyan-500 "
         dangerouslySetInnerHTML={{ __html: content }}
       />
       <div>

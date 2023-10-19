@@ -31,11 +31,12 @@ export default function CommentBox({
             onChange={(e) => setText(() => e.target.value)}
             value={text}
           ></textarea>
-          <div className="flex justify-between mt-4 ">
-            <span className="text-slate-900 dark:text-slate-100">
-              <FontAwesomeIcon icon={faUser} /> {session.user?.name}
-            </span>
-            <div className="space-x-6 font-bold">
+          <div className="flex justify-between mt-4 font-bold">
+            <div className="space-x-8">
+              <span className="text-slate-900 dark:text-slate-100">
+                <FontAwesomeIcon icon={faUser} /> {session.user?.name}
+              </span>
+
               <button
                 className="border-none border-0 hover:text-red-500 space-x-1"
                 onClick={() => signOut({ redirect: false })}
@@ -43,11 +44,11 @@ export default function CommentBox({
                 <FontAwesomeIcon icon={faRightFromBracket} />
                 <span>Sign Out</span>
               </button>
-              <button className="border-none border-0 hover:text-green-500 space-x-1">
-                <FontAwesomeIcon icon={faPaperPlane} />
-                <span>Post</span>
-              </button>
             </div>
+            <button className="border-none border-0 hover:text-green-500 space-x-1">
+              <FontAwesomeIcon icon={faPaperPlane} />
+              <span>Post</span>
+            </button>
           </div>
         </div>
       </form>

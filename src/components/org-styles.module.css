@@ -20,11 +20,6 @@
 .org blockquote {
   @apply my-8 text-xl;
 }
-
-.org p {
-  @apply indent-4;
-}
-
 .org ul,
 .org ol,
 .org dl {

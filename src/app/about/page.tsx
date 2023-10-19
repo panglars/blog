@@ -17,6 +17,7 @@ export default function Page() {
       <h2 className="text-3xl leading-snug my-12 text-slate-900 dark:text-slate-100">
         My Firend Links
       </h2>
+
       <div>
         <CommentBox onSubmit={onSubmit} text={text} setText={setText} />
         <CommentList comments={comments} onDelete={onDelete} />
