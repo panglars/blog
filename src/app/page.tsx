@@ -15,7 +15,7 @@ export default async function Page() {
   return (
     <div className="max-w-4xl mx-auto">
       <h1 className="text-center text-4xl leading-snug my-16 font-semibold text-slate-900 dark:text-slate-100">{`Hello,I'm Pang LAN`}</h1>
-      <div className="prose dark:prose-invert">
+      <div className="">
         {allPosts.map((post) => (
           <div key={post.slug} className="mb-8">
             <h2 className="text-3xl text-slate-900 dark:text-slate-100 font-semibold tracking-tighter my-4">
