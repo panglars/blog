@@ -47,8 +47,8 @@ export function getAllPosts(fields: string[] = []): Record<string, any>[] {
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 }
 
-export function getAllCategory() {
+export function getAllCategory(fields: string[] = []) {
   const slugs = getPostSlugs();
-  const categorys = slugs.map((slug) => getPostBySlug(slug)["category"]);
+  const categorys = slugs.map((slug) => getPostBySlug(slug, fields));
   console.log(categorys);
 }
