@@ -4,24 +4,10 @@
         <title>PangLAN's Blog</title>
         <link>https://yinn.party</link>
         <description>PangLAN's Blog</description>
-        <lastBuildDate>Sun, 12 Nov 2023 09:36:42 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 05 Dec 2023 05:05:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>All rights reserved 2023,@PangLAN</copyright>
-        <item>
-            <title><![CDATA[About posdcast player]]></title>
-            <link>https://yinn.party/post/mypodcastclient</link>
-            <guid>https://yinn.party/post/mypodcastclient</guid>
-            <pubDate>Sat, 14 Oct 2023 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[<p>I have been listening to podcasts since the summer of 2021.
-</p><p><a href="https://www.xiaoyuzhoufm.com">Xiaoyuzhou</a> is my first podcast client on my Android phone. When I tried to listen to music on Netease Music or watch videos on Bilibili in real-time, I found myself only listening to Chinese podcasts. Until the winner of the next year, I learned about economics, technology, nutrition, and crypto. It's a good platform in China. It has special features like comments, an all-in-one inbox, and the ability to track how much time you spend listening. In the summer of 2023, I had listened for 500 hours.
-</p><p>However, Xiaoyuzhou is a specialized platform in China. Everyone must log in with their real number or WeChat account, and it is heavily regulated in terms of its podcast content. Many funny podcast channels about politics and full English channels cannot be found on it. So I searched for a podcast client on the Play Store. A good choice I found was Google Podcasts. I tried it for only a week because it was too difficult compared to Xiaoyuzhou and lacked advanced configuration options.
-</p><p>During the Lunar New Year, I downloaded many applications like Spotify, Podcast Player, and Pocket Casts. It was hard to find a good podcast client like the Apple Podcast in the Apple ecosystem, so I went back to Google Podcasts.
-</p><p>However, this summer, Google announced that Google Podcasts will be shutting down in 2024 in favor of YouTube Music. I couldn't believe it when I tried listening on YouTube Music without ads. So now I have to find another app.
-</p><p>Some users on Telegram told me about an open-source podcast player called <a href="https://antennapod.org">AntennaPod</a>, which is ad-free and has a user interface designed with the Material Design ecosystem. It took me at least one month when write this article. It's fully configurable, but refreshing and getting all subscriptions one by one is too slow. There are differences compared to server-based podcast players, but I can understand them.
-</p>]]></content:encoded>
-            <author>i@yinn.party (PangLAN)</author>
-        </item>
         <item>
             <title><![CDATA[Hello world!]]></title>
             <link>https://yinn.party/post/hello-world</link>

@@ -13,24 +13,24 @@ export default async function Page() {
   const allPosts = await getPostInfo();
   // console.log(allPosts);
   return (
-    <div className="max-w-4xl mx-auto">
-      <h1 className="text-center text-4xl leading-snug my-16 font-semibold text-slate-900 dark:text-slate-100">{`Hello,I'm Pang LAN`}</h1>
-      <div className="">
+    <div className="mx-auto max-w-4xl">
+      <h1 className="my-16 text-center text-4xl font-semibold leading-snug text-slate-900 dark:text-slate-100">{`Hello,I'm Pang LAN`}</h1>
+      <div>
         {allPosts.map((post) => (
           <div key={post.slug} className="mb-8">
-            <h2 className="text-3xl text-slate-900 dark:text-slate-100 font-semibold tracking-tighter my-4">
+            <h2 className="my-4 text-3xl font-semibold tracking-tighter text-slate-900 dark:text-slate-100">
               <Link href={`/post/${post.slug}`} className="no-underline">
                 {post.title}
               </Link>
             </h2>
             <div className="flex justify-between">
               {post.category && (
-                <p className="font-serif italic tracking-tighter text-xl">
+                <p className="font-serif text-xl italic tracking-tighter">
                   {post.category}
                 </p>
               )}
               {post.date && (
-                <p className="font-serif italic tracking-tighter text-xl">
+                <p className="font-serif text-xl italic tracking-tighter">
                   {post.date}
                 </p>
               )}
