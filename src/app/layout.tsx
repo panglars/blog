@@ -3,10 +3,11 @@ import "./globals.css";
 import React from "react";
 import { Inconsolata } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Analytics } from "@/components/analytics";
 import Footers from "@/components/footers";
 import Headers from "@/components/headers";
 import { SessionProvider } from "next-auth/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 const font = Inconsolata({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -32,8 +33,8 @@ export default function RootLayout({
                 <Footers />
               </div>
             </div>
-            <Analytics />
           </ThemeProvider>
+          <SpeedInsights />
         </body>
       </SessionProvider>
     </html>

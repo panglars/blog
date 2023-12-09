@@ -50,5 +50,4 @@ export function getAllPosts(fields: string[] = []): Record<string, any>[] {
 export function getAllCategory(fields: string[] = []) {
   const slugs = getPostSlugs();
   const categorys = slugs.map((slug) => getPostBySlug(slug, fields));
-  console.log(categorys);
 }
