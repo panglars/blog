@@ -15,13 +15,13 @@ export function ModeToggle() {
 
   return (
     <div className="relative flex space-x-6 px-4 pb-4 md:relative  md:px-0 md:pb-8">
-      <button className=" transition hover:text-cyan-500">
+      <button className=" cursor-pointer transition hover:text-cyan-500">
         <FontAwesomeIcon icon={faLanguage} />
       </button>
 
       <button
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        className=" transition hover:text-cyan-500"
+        className=" cursor-pointer transition hover:text-cyan-500"
       >
         {theme !== "dark" ? (
           <FontAwesomeIcon icon={faMoon} />
@@ -29,7 +29,7 @@ export function ModeToggle() {
           <FontAwesomeIcon icon={faSun} />
         )}
       </button>
-      <button className=" transition hover:text-cyan-500">
+      <button className=" cursor-pointer transition hover:text-cyan-500">
         <Link href="/feed.xml">
           <FontAwesomeIcon icon={faRss} />
         </Link>

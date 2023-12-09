@@ -11,7 +11,7 @@ export function getPostSlugs(): string[] {
 
 export function getPostBySlug(
   slug: string,
-  fields: string[] = []
+  fields: string[] = [],
 ): Record<string, any> {
   const realSlug = slug.replace(/\.org$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.org`);
@@ -31,13 +31,12 @@ export function getPostBySlug(
     else if (field === "date") {
       items[field] = String(org.data[field]).replace(
         /^<(\d{4}-\d{2}-\d{2}) \w{3}>$/,
-        "$1"
+        "$1",
       );
     } else if (org.data[field]) {
       items[field] = org.data[field];
     }
   });
-  //  console.log(items);
   return items;
 }
 
