@@ -30,7 +30,6 @@
     "date-fns": "^2.30.0",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
-    "feed": "^4.2.2",
     "next": "13.4.12",
     "next-auth": "^4.24.4",
     "next-themes": "^0.2.1",
@@ -38,6 +37,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rehype-stringify": "^9.0.4",
+    "rss": "^1.2.2",
     "swr": "^2.2.4",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6",
@@ -45,10 +45,10 @@
     "uniorg-extract-keywords": "^1.0.0",
     "uniorg-parse": "^2.0.2",
     "uniorg-rehype": "^1.1.0",
-    "uniorg-stringify": "^1.1.0",
-    "unist-util-visit": "^5.0.0"
+    "uniorg-stringify": "^1.1.0"
   },
   "devDependencies": {
+    "@types/rss": "^0.0.32",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.9"
   }

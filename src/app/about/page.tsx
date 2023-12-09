@@ -9,9 +9,6 @@ export default function Page() {
   const { text, setText, comments, onSubmit, onDelete } = useComment();
   return (
     <>
-      <h1 className="my-16 text-center text-4xl leading-snug text-slate-900 dark:text-slate-100 ">
-        About Me
-      </h1>
       <p> Building...</p>
       <h2 className="my-12 text-3xl leading-snug text-slate-900 dark:text-slate-100">
         My Firend Links

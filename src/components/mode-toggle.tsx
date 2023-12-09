@@ -18,6 +18,7 @@ export function ModeToggle() {
       <button className=" transition hover:text-cyan-500">
         <FontAwesomeIcon icon={faLanguage} />
       </button>
+
       <button
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         className=" transition hover:text-cyan-500"
@@ -29,7 +30,7 @@ export function ModeToggle() {
         )}
       </button>
       <button className=" transition hover:text-cyan-500">
-        <Link href="/rss.xml">
+        <Link href="/feed.xml">
           <FontAwesomeIcon icon={faRss} />
         </Link>
       </button>
