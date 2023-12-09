@@ -14,26 +14,24 @@ export function ModeToggle() {
   const { setTheme, theme } = useTheme();
 
   return (
-    <div className="flex space-x-6">
+    <div className="relative flex space-x-6 px-4 pb-4 md:relative  md:px-0 md:pb-8">
+      <button className=" transition hover:text-cyan-500">
+        <FontAwesomeIcon icon={faLanguage} />
+      </button>
       <button
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        className="w-6 h-6 flex items-center justify-center hover:bg-cyan-500"
+        className=" transition hover:text-cyan-500"
       >
-        <span className="sr-only">Toggle mode</span>
         {theme !== "dark" ? (
           <FontAwesomeIcon icon={faMoon} />
         ) : (
           <FontAwesomeIcon icon={faSun} />
         )}
       </button>
-      <Link href="/rss.xml">
-        <button className="w-6 h-6 flex items-center justify-center hover:bg-cyan-500">
-          <span className="sr-only">RSS</span>
+      <button className=" transition hover:text-cyan-500">
+        <Link href="/rss.xml">
           <FontAwesomeIcon icon={faRss} />
-        </button>
-      </Link>
-      <button className="w-6 h-6 flex items-center justify-center hover:bg-cyan-500">
-        <FontAwesomeIcon icon={faLanguage} />
+        </Link>
       </button>
     </div>
   );

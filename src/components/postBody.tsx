@@ -7,15 +7,17 @@ import CommentList from "@/components/CommentList";
 export default function PostBody({ content }: any) {
   const { text, setText, comments, onSubmit, onDelete } = useComment();
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="mx-auto max-w-3xl">
       <article
-        className="prose max-w-none prose-slate dark:prose-invert prose-lg prose-a:underline
+        className="prose prose-lg prose-slate max-w-none dark:prose-invert prose-a:underline
 hover:prose-a:text-cyan-500 "
         dangerouslySetInnerHTML={{ __html: content }}
       />
       <div>
+        {/*
         <CommentBox onSubmit={onSubmit} text={text} setText={setText} />
         <CommentList comments={comments} onDelete={onDelete} />
+          */}
       </div>
     </div>
   );

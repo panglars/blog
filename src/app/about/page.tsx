@@ -9,19 +9,20 @@ export default function Page() {
   const { text, setText, comments, onSubmit, onDelete } = useComment();
   return (
     <>
-      <h1 className="text-center text-4xl leading-snug my-16 text-slate-900 dark:text-slate-100 ">
+      <h1 className="my-16 text-center text-4xl leading-snug text-slate-900 dark:text-slate-100 ">
         About Me
       </h1>
       <p> Building...</p>
-      <h2 className="text-3xl leading-snug my-12 text-slate-900 dark:text-slate-100">
+      <h2 className="my-12 text-3xl leading-snug text-slate-900 dark:text-slate-100">
         My Firend Links
       </h2>
       <Firends />
       <div>
+        {/*
         <CommentBox onSubmit={onSubmit} text={text} setText={setText} />
         <CommentList comments={comments} onDelete={onDelete} />
+          */}
       </div>
     </>
   );
 }
-
