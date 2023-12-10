@@ -37,6 +37,7 @@ export function getPostBySlug(
       items[field] = org.data[field];
     }
   });
+  //  console.log(items);
   return items;
 }
 
@@ -49,5 +50,16 @@ export function getAllPosts(fields: string[] = []): Record<string, any>[] {
 
 export function getAllCategory(fields: string[] = []) {
   const slugs = getPostSlugs();
-  const categorys = slugs.map((slug) => getPostBySlug(slug, fields));
+  let allPostsData = slugs
+    .map((slug) => getPostBySlug(slug, fields))
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+  return allPostsData.reduce((acc, post) => {
+    // 如果该类别在累加器对象中还不存在，则创建一个新数组
+    if (!acc[post.category]) {
+      acc[post.category] = [];
+    }
+    // 将当前的帖子添加到其类别的数组中
+    acc[post.category].push(post);
+    return acc;
+  }, {}); // 初始化累加器为一个空对象
 }
