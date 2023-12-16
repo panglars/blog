@@ -22,22 +22,31 @@ export function getPostBySlug(
 
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
-    if (field === "slug") {
-      items[field] = realSlug;
-    } else if (field === "content") {
-      items[field] = String(org);
-    }
-    // <<1145-14-14 Sat> -> 1145-14-14
-    else if (field === "date") {
-      items[field] = String(org.data[field]).replace(
-        /^<(\d{4}-\d{2}-\d{2}) \w{3}>$/,
-        "$1",
-      );
-    } else if (org.data[field]) {
-      items[field] = org.data[field];
+    switch (field) {
+      case "slug":
+        items[field] = realSlug;
+        break;
+      case "content":
+        items[field] = String(org);
+        break;
+      case "date":
+        // <<1145-14-14 Sat> -> 1145-14-14
+        items[field] = String(org.data[field]).replace(
+          /^<(\d{4}-\d{2}-\d{2}) \w{3}>$/,
+          "$1",
+        );
+        break;
+      case "tags":
+        items[field] = String(org.data[field]).split(",");
+        break;
+      default:
+        if (org.data[field]) {
+          items[field] = org.data[field];
+        }
+        break;
     }
   });
-  //  console.log(items);
+  console.log(items);
   return items;
 }
 

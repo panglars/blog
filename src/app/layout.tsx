@@ -1,14 +1,31 @@
-"use client";
 import "./globals.css";
-import React from "react";
-import { Inconsolata } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
-import Footers from "@/components/footers";
-import Headers from "@/components/headers";
-import { SessionProvider } from "next-auth/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const font = Inconsolata({ subsets: ["latin"] });
+import React from "react";
+import { Space_Grotesk } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import Footers from "@/components/Footers";
+import Headers from "@/components/headers";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Metadata } from "next";
+import siteMetadata from "@/siteMetadata";
+import SectionContainer from "@/components/SectionContainer";
+
+const space_grotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-grotesk",
+});
+
+export const metadata: Metadata = {
+  title: siteMetadata.TITLE,
+  description: siteMetadata.DESCRIPTION,
+  alternates: {
+    canonical: siteMetadata.SITEURL,
+    types: {
+      "application/rss+xml": [{ url: "feed.xml", title: "RSS Feed" }],
+    },
+  },
+};
 
 export default function RootLayout({
   children,
@@ -16,27 +33,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <SessionProvider>
-        <body
-          className={` bg-slate-100 text-slate-700 antialiased dark:bg-slate-900 dark:text-slate-400 ${font.className}`}
-        >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="mx-4 mb-40 mt-8 flex max-w-5xl flex-col md:mt-20 md:flex-row lg:mx-auto lg:mt-32">
-              <aside className="-mx-4 md:mx-0 md:w-[200px] md:flex-shrink-0 md:px-0">
-                <Headers />
-              </aside>
-              <div className="mt-6 flex min-w-0 flex-auto flex-col md:mt-0">
-                <div className="min-h-[60vh] flex-auto ">
-                  <main className="w-full flex-auto md:w-9/12">{children}</main>
-                </div>
-                <Footers />
-              </div>
+    <html
+      lang={siteMetadata.LANG}
+      className={`${space_grotesk.variable} scroll-smooth`}
+    >
+      <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <SectionContainer>
+            <div className="flex h-screen flex-col justify-between font-sans">
+              <Headers />
+              <main className="mb-auto">{children}</main>
+              <Footers />
             </div>
-          </ThemeProvider>
-          <SpeedInsights />
-        </body>
-      </SessionProvider>
+          </SectionContainer>
+        </ThemeProvider>
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

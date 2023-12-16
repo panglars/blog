@@ -1,11 +1,8 @@
 "use client";
 
 import useComment from "@/components/useComment";
-import CommentBox from "@/components/CommentBox";
-import CommentList from "@/components/CommentList";
 
 export default function PostBody({ content }: any) {
-  const { text, setText, comments, onSubmit, onDelete } = useComment();
   return (
     <div className="mx-auto max-w-3xl">
       <article

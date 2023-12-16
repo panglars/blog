@@ -1,16 +1,16 @@
 import RSS from "rss";
 import { getAllPosts } from "@/lib/posts";
-import siteConfig from "@/siteConfig";
+import siteMetadata from "@/siteMetadata";
 
 export async function GET() {
   const feed = new RSS({
-    title: siteConfig.TITLE,
-    description: siteConfig.DESCRIPTION,
+    title: siteMetadata.TITLE,
+    description: siteMetadata.DESCRIPTION,
     generator: "Emacs",
-    copyright: "All rights reserved 2023,@PangLAN",
-    language: "en-US",
-    site_url: siteConfig.SITEURL,
-    feed_url: siteConfig.SITEURL + "/feed.xml",
+    copyright: siteMetadata.COPYRIGHT,
+    language: siteMetadata.LANG,
+    site_url: siteMetadata.SITEURL,
+    feed_url: siteMetadata.SITEURL + "/feed.xml",
   });
   const allPostsData = getAllPosts([
     "title",
@@ -28,7 +28,7 @@ export async function GET() {
       description: post.content,
       guid: post.slug,
       date: new Date(post.date), //use UTC time
-      url: siteConfig.SITEURL + "/post/" + post.slug,
+      url: siteMetadata.SITEURL + "/post/" + post.slug,
     });
   });
   return new Response(feed.xml(), {

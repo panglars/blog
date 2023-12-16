@@ -1,25 +1,43 @@
 import Link from "next/link";
-import { ModeToggle } from "@/components/mode-toggle";
+import { ThemeToggle } from "./themeToggle";
+import { IoLogoRss } from "react-icons/io5";
+import MobileNav from "./MobileNav";
+
 export default function Headers() {
   return (
-    <div className="lg:sticky lg:top-20">
-      {
-        // TODO: Add blog information
-      }
-      <ModeToggle />
-      <nav className=" relative flex flex-row items-start px-4 pb-4 text-xl md:relative md:flex-col md:overflow-auto md:px-0 md:pb-0">
-        <div className="flex flex-row space-x-4 pr-10 md:flex-col md:space-x-0">
-          <Link href="/" className="transition  hover:text-cyan-500">
-            Home
+    <header className="flex items-center justify-between py-10">
+      <div>
+        {
+          // TODO: Add blog logo
+        }
+      </div>
+      <nav className="flex items-center space-x-4 leading-5 sm:space-x-6">
+        <Link
+          href="/"
+          className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
+        >
+          Home
+        </Link>
+        <Link
+          href="/archive"
+          className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
+        >
+          Archive
+        </Link>
+        <Link
+          href="/about"
+          className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
+        >
+          About
+        </Link>
+        <button className="h-6 w-6 text-gray-900 dark:text-gray-100">
+          <Link href="/feed.xml">
+            <IoLogoRss />
           </Link>
-          <Link href="/archive" className=" transition hover:text-cyan-500">
-            Archive
-          </Link>
-          <Link href="/about" className=" transition hover:text-cyan-500">
-            About
-          </Link>
-        </div>
+        </button>
+        <ThemeToggle />
+        <MobileNav />
       </nav>
-    </div>
+    </header>
   );
 }
