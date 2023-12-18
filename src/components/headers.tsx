@@ -1,26 +1,43 @@
 import Link from "next/link";
-import { ModeToggle } from "@/components/mode-toggle";
+import { ThemeToggle } from "./themeToggle";
+import { IoLogoRss } from "react-icons/io5";
+import MobileNav from "./MobileNav";
+
 export default function Headers() {
   return (
-    <header>
-      <div className="flex items-center justify-between">
-        <ModeToggle />
+    <header className="flex items-center justify-between py-10">
+      <div>
         {
-          // TODO language toggle components
-          // TODO RSS icon
+          // TODO: Add blog logo
         }
-        <nav className="ml-auto font-semibold space-x-8">
-          <Link href="/" className="hover:text-cyan-500">
-            Home
-          </Link>
-          <Link href="/archive" className="hover:text-cyan-500">
-            Archive
-          </Link>
-          <Link href="/about" className="hover:text-cyan-500">
-            About
-          </Link>
-        </nav>
       </div>
+      <nav className="flex items-center space-x-4 leading-5 sm:space-x-6">
+        <Link
+          href="/"
+          className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
+        >
+          Home
+        </Link>
+        <Link
+          href="/archive"
+          className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
+        >
+          Archive
+        </Link>
+        <Link
+          href="/about"
+          className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
+        >
+          About
+        </Link>
+        <button className="h-6 w-6 text-gray-900 dark:text-gray-100">
+          <Link href="/feed.xml">
+            <IoLogoRss />
+          </Link>
+        </button>
+        <ThemeToggle />
+        <MobileNav />
+      </nav>
     </header>
   );
 }

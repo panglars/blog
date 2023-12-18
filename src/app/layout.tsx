@@ -1,13 +1,31 @@
-"use client";
 import "./globals.css";
+
 import React from "react";
-import { Inconsolata } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Analytics } from "@/components/analytics";
-import Footers from "@/components/footers";
+import Footers from "@/components/Footers";
 import Headers from "@/components/headers";
-import { SessionProvider } from "next-auth/react";
-const font = Inconsolata({ subsets: ["latin"] });
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Metadata } from "next";
+import siteMetadata from "@/siteMetadata";
+import SectionContainer from "@/components/SectionContainer";
+
+const space_grotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-grotesk",
+});
+
+export const metadata: Metadata = {
+  title: siteMetadata.TITLE,
+  description: siteMetadata.DESCRIPTION,
+  alternates: {
+    canonical: siteMetadata.SITEURL,
+    types: {
+      "application/rss+xml": [{ url: "feed.xml", title: "RSS Feed" }],
+    },
+  },
+};
 
 export default function RootLayout({
   children,
@@ -15,21 +33,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <SessionProvider>
-        <body
-          className={`antialiased min-h-screen bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 ${font.className}`}
-        >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="max-w-3xl mx-auto py-10 px-4">
+    <html
+      lang={siteMetadata.LANG}
+      className={`${space_grotesk.variable} scroll-smooth`}
+    >
+      <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <SectionContainer>
+            <div className="flex h-screen flex-col justify-between font-sans">
               <Headers />
-              <main>{children}</main>
+              <main className="mb-auto">{children}</main>
+              <Footers />
             </div>
-            <Footers />
-            <Analytics />
-          </ThemeProvider>
-        </body>
-      </SessionProvider>
+          </SectionContainer>
+        </ThemeProvider>
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

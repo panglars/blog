@@ -1,17 +1,7 @@
-import {getAllPosts} from "@/lib/posts";
+import { getAllCategory } from "@/lib/posts";
 
 export default async function Page() {
-  const allPosts = await getPostInfo();
-
-  return (
-    <>
-      <h1 className="text-center text-4xl">Category</h1>
-    </>
-  );
-}
-
-async function getPostInfo() {
-  return getAllPosts([
+  const groupdata = getAllCategory([
     "title",
     "date",
     "slug",
@@ -20,4 +10,29 @@ async function getPostInfo() {
     "tags",
     "content",
   ]);
+
+  return (
+    <>
+      <h1 className="text-center text-3xl">Category</h1>
+      {Object.entries(groupdata).map(([category, posts]) => (
+        <div key={category}>
+          <h2>{category}</h2>
+          {posts.map((post: Post) => (
+            <p key={post.slug}>
+              {post.slug} {post.date}
+            </p>
+          ))}
+        </div>
+      ))}
+    </>
+  );
+}
+
+interface Post {
+  title: string;
+  date: string;
+  slug: string;
+  language: string;
+  category: string;
+  content: string;
 }
