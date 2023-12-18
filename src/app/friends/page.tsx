@@ -14,7 +14,7 @@ export default function Page() {
   const friends = getFriends();
   return (
     <>
-      <script
+      <article
         className="prose max-w-none py-4 dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: String(friends) }}
       />

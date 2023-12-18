@@ -8,4 +8,4 @@ pnpm run dev
 - [ ] Code Blocks highlight
 - [ ] Language fitter button
 - [ ] Add comment system
-- [ ] Add friends page
+- [-] Add friends page
