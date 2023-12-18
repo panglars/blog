@@ -15,10 +15,10 @@ export default async function Page() {
     <>
       <h1 className="text-center text-3xl">Category</h1>
       {Object.entries(groupdata).map(([category, posts]) => (
-        <div>
+        <div key={category}>
           <h2>{category}</h2>
-          {posts.map((post) => (
-            <p>
+          {posts.map((post: Post) => (
+            <p key={post.slug}>
               {post.slug} {post.date}
             </p>
           ))}
@@ -26,4 +26,13 @@ export default async function Page() {
       ))}
     </>
   );
+}
+
+interface Post {
+  title: string;
+  date: string;
+  slug: string;
+  language: string;
+  category: string;
+  content: string;
 }

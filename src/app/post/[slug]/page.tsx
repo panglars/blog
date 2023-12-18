@@ -34,30 +34,12 @@ export default async function Post({ params }: Props) {
   const post = await getPost(params);
   return (
     <>
-      <h1 className="text-3xl mt-12 mb-3 font-semibold text-slate-900 dark:text-slate-100 ">
-        {post.title}
-      </h1>
-      <div className="mb-12 font-serif italic text-xl tracking-tighter">
-        <div className="flex justify-between">
-          <span> Category</span>
-          <span>{post.category}</span>
+      <div className="space-y-1 pb-10 text-center dark:border-gray-700">
+        <div className="relative pt-10">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            {post.title}
+          </h1>
         </div>
-        <div className="flex justify-between">
-          <span>Date</span>
-          <span>{post.date}</span>
-        </div>
-        {post.language && (
-          <div className="flex justify-between">
-            <span>Language</span>
-            <span>{post.language}</span>
-          </div>
-        )}
-        {post.tags && (
-          <div className="flex justify-between">
-            <span>Tags</span>
-            <span>{post.tags}</span>
-          </div>
-        )}
       </div>
       <PostBody content={post.content} />
     </>

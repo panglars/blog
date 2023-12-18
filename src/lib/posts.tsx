@@ -46,7 +46,7 @@ export function getPostBySlug(
         break;
     }
   });
-  console.log(items);
+  //  console.log(items);
   return items;
 }
 
