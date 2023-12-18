@@ -10,19 +10,19 @@ export default function Headers() {
         {
           // TODO: Add blog logo
         }
-      </div>
-      <nav className="flex items-center space-x-4 leading-5 sm:space-x-6">
         <Link
           href="/"
           className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
         >
-          Home
+          Blog
         </Link>
+      </div>
+      <nav className="flex items-center space-x-4 leading-5 sm:space-x-6">
         <Link
-          href="/archive"
+          href="/category"
           className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
         >
-          Archive
+          Category
         </Link>
         <Link
           href="/about"
@@ -30,6 +30,13 @@ export default function Headers() {
         >
           About
         </Link>
+        <Link
+          href="/friends"
+          className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
+        >
+          Friends
+        </Link>
+
         <button className="h-6 w-6 text-gray-900 dark:text-gray-100">
           <Link href="/feed.xml">
             <IoLogoRss />

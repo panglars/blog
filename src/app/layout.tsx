@@ -4,7 +4,7 @@ import React from "react";
 import { Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footers from "@/components/Footers";
-import Headers from "@/components/headers";
+import Headers from "@/components/Headers";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from "next";
 import siteMetadata from "@/siteMetadata";
