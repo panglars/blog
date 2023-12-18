@@ -1,5 +1,3 @@
-"use client";
-
 export default function PostBody({ content }: any) {
   return (
     <div className="mx-auto max-w-3xl">

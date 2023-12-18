@@ -1,12 +1,23 @@
-"use client";
+import fs from "fs";
+import { join } from "path";
+import orgToHtml from "@/lib/orgToHtml";
+
+function getFriends() {
+  const context = fs.readFileSync(
+    join(process.cwd(), "public/about.org"),
+    "utf8",
+  );
+  return orgToHtml(context);
+}
 
 export default function Page() {
+  const about = getFriends();
   return (
     <>
-      <p> Building...</p>
-      <h2 className="my-12 text-3xl leading-snug text-slate-900 dark:text-slate-100">
-        My Firend Links
-      </h2>
+      <article
+        className="prose max-w-none py-4 dark:prose-invert"
+        dangerouslySetInnerHTML={{ __html: String(about) }}
+      />
     </>
   );
 }
