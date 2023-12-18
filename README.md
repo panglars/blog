@@ -5,7 +5,7 @@ pnpm run dev
 ```
 
 ## Todo
-[ ]  Code Blocks highlight
-[ ]  Language fitter button
-[ ]  Add comment rate limit
-[ ]  Rewrite CommentBox style
+- [ ] Code Blocks highlight
+- [ ] Language fitter button
+- [ ] Add comment system
+- [ ] Add friends page 
