@@ -14,24 +14,18 @@
     "path": false
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.2",
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/free-brands-svg-icons": "^6.4.2",
-    "@fortawesome/free-regular-svg-icons": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "20.4.5",
     "@types/react": "18.2.17",
     "@types/react-dom": "18.2.7",
-    "@upstash/redis": "^1.24.1",
-    "@vercel/speed-insights": "^1.0.1",
+    "@upstash/redis": "^1.25.2",
+    "@vercel/speed-insights": "^1.0.2",
     "autoprefixer": "10.4.14",
     "date-fns": "^2.30.0",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
     "next": "13.4.12",
-    "next-auth": "^4.24.4",
+    "next-auth": "^4.24.5",
     "next-themes": "^0.2.1",
     "postcss": "8.4.27",
     "react": "18.2.0",
@@ -44,15 +38,15 @@
     "typescript": "5.1.6",
     "unified": "^10.1.2",
     "uniorg": "^1.1.1",
-    "uniorg-extract-keywords": "^1.0.0",
-    "uniorg-parse": "^2.0.2",
-    "uniorg-rehype": "^1.1.0",
-    "uniorg-stringify": "^1.1.0"
+    "uniorg-extract-keywords": "^1.0.1",
+    "uniorg-parse": "^2.1.1",
+    "uniorg-rehype": "^1.1.1",
+    "uniorg-stringify": "^1.1.1"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
     "@types/rss": "^0.0.32",
-    "prettier": "^3.1.0",
+    "prettier": "^3.1.1",
     "prettier-plugin-tailwindcss": "^0.5.9"
   }
 }
