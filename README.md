@@ -9,3 +9,4 @@ pnpm run dev
 - [ ] Language fitter button
 - [ ] Add comment system
 - [-] Add friends page
+

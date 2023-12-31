@@ -1,38 +1,5 @@
-import { getAllCategory } from "@/lib/posts";
+import CategoryList from "@/layouts/CategoryList";
 
-export default async function Page() {
-  const groupdata = getAllCategory([
-    "title",
-    "date",
-    "slug",
-    "language",
-    "category",
-    "tags",
-    "content",
-  ]);
-
-  return (
-    <>
-      <h1 className="text-center text-3xl">Category</h1>
-      {Object.entries(groupdata).map(([category, posts]) => (
-        <div key={category}>
-          <h2>{category}</h2>
-          {posts.map((post: Post) => (
-            <p key={post.slug}>
-              {post.slug} {post.date}
-            </p>
-          ))}
-        </div>
-      ))}
-    </>
-  );
-}
-
-interface Post {
-  title: string;
-  date: string;
-  slug: string;
-  language: string;
-  category: string;
-  content: string;
+export default function Category() {
+  return <CategoryList />;
 }
