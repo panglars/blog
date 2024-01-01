@@ -56,30 +56,22 @@ export function getAllPosts(fields: string[] = []) {
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 }
 
-export function getAllCategory(fields: string[] = []) {
-  const slugs = getPostSlugs();
-  let allPostsData = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return allPostsData.reduce((acc, post) => {
-    if (!acc[post.category]) {
-      acc[post.category] = [];
-    }
-    acc[post.category].push(post);
-    return acc;
-  }, {});
-}
-
 export function getAllTags(fields: string[] = []) {
   const slugs = getPostSlugs();
   let allPostsData = slugs
     .map((slug) => getPostBySlug(slug, fields))
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+
   return allPostsData.reduce((acc, post) => {
-    if (!acc[post.tags]) {
-      acc[post.tags] = [];
+    if (Array.isArray(post.tags)) {
+      post.tags.forEach((tag) => {
+        if (!acc[tag]) {
+          acc[tag] = [];
+        }
+        acc[tag].push(post);
+      });
     }
-    acc[post.tags].push(post);
+    // console.log(acc);
     return acc;
   }, {});
 }
