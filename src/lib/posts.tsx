@@ -49,7 +49,7 @@ export function getPostBySlug(
   return items;
 }
 
-export function getAllPosts(fields: string[] = []): Record<string, any>[] {
+export function getAllPosts(fields: string[] = []) {
   const slugs = getPostSlugs();
   return slugs
     .map((slug) => getPostBySlug(slug, fields))
@@ -66,6 +66,21 @@ export function getAllCategory(fields: string[] = []) {
       acc[post.category] = [];
     }
     acc[post.category].push(post);
+    return acc;
+  }, {});
+}
+
+export function getAllTags(fields: string[] = []) {
+  const slugs = getPostSlugs();
+  let allPostsData = slugs
+    .map((slug) => getPostBySlug(slug, fields))
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+  return allPostsData.reduce((acc, post) => {
+    if (!acc[post.tags]) {
+      acc[post.tags] = [];
+    }
+    acc[post.tags].push(post);
+    console.log(acc);
     return acc;
   }, {});
 }

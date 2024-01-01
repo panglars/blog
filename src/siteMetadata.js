@@ -10,7 +10,7 @@ const siteMetadata = {
   FACEBOOK: "",
   LINKEDIN: "",
   LANG: "en-US",
-  COPYRIGHT: "All rights reserved",
+  COPYRIGHT: "CC BY-SA 4.0",
 };
 
 export default siteMetadata;

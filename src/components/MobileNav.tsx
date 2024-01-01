@@ -53,13 +53,23 @@ export default function MobileNav() {
           </div>
           <div className="px-12 py-4">
             <Link
-              href="/category"
+              href="/archive"
               className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
               onClick={onToggleNav}
             >
-              Category
+              Archive
             </Link>
           </div>
+          <div className="px-12 py-4">
+            <Link
+              href="/tags"
+              className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+              onClick={onToggleNav}
+            >
+              Tags
+            </Link>
+          </div>
+
           <div className="px-12 py-4">
             <Link
               href="/about"

@@ -22,11 +22,14 @@ export default function Footers() {
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{` • `}</div>
-          <Link href="/">{siteMetadata.COPYRIGHT}</Link>
+          <Link href="https://creativecommons.org/licenses/by-sa/4.0/">
+            {siteMetadata.COPYRIGHT}
+          </Link>
         </div>
         <div className="mb-8 space-x-4 text-sm text-gray-500 dark:text-gray-400">
           <Link href="https://github.com/rasendubi/uniorg">uniorg</Link>
           <Link href="https://nextjs.org">Next.js</Link>
+          <Link href="https://vercel.com">Vercel</Link>
         </div>
       </div>
     </footer>
