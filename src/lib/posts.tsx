@@ -80,7 +80,6 @@ export function getAllTags(fields: string[] = []) {
       acc[post.tags] = [];
     }
     acc[post.tags].push(post);
-    console.log(acc);
     return acc;
   }, {});
 }

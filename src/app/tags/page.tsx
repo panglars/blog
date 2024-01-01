@@ -1,10 +1,16 @@
-import Link from "next/link";
+import PostList from "@/layouts/PostListWithTags";
+import { getAllPosts } from "@/lib/posts";
 
-export default function Page() {
-  return (
-    <>
-      <h1 className="text-center text-2xl">Tags</h1>
-      <p> Building...</p>
-    </>
-  );
+export default function Tags() {
+  const allPosts = getAllPosts([
+    "title",
+    "date",
+    "slug",
+    "author",
+    "category",
+    "tags",
+    "content",
+  ]);
+
+  return <PostList displayPosts={allPosts} tagTitle={"AllPosts"} />;
 }
