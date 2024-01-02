@@ -18,7 +18,7 @@
     "@types/node": "20.4.5",
     "@types/react": "18.2.17",
     "@types/react-dom": "18.2.7",
-    "@upstash/redis": "^1.25.2",
+    "@upstash/redis": "^1.27.1",
     "@vercel/speed-insights": "^1.0.2",
     "autoprefixer": "10.4.14",
     "date-fns": "^2.30.0",
@@ -48,6 +48,6 @@
     "@tailwindcss/forms": "^0.5.7",
     "@types/rss": "^0.0.32",
     "prettier": "^3.1.1",
-    "prettier-plugin-tailwindcss": "^0.5.9"
+    "prettier-plugin-tailwindcss": "^0.5.10"
   }
 }

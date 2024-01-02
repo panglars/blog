@@ -49,23 +49,27 @@ export function getPostBySlug(
   return items;
 }
 
-export function getAllPosts(fields: string[] = []): Record<string, any>[] {
+export function getAllPosts(fields: string[] = []) {
   const slugs = getPostSlugs();
   return slugs
     .map((slug) => getPostBySlug(slug, fields))
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 }
 
-export function getAllCategory(fields: string[] = []) {
-  const slugs = getPostSlugs();
-  let allPostsData = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return allPostsData.reduce((acc, post) => {
-    if (!acc[post.category]) {
-      acc[post.category] = [];
+export function getAllTags(fields: string[] = []) {
+  const allPosts = getAllPosts(fields);
+  const tagsMap: Record<string, any> = {};
+  allPosts.forEach((post) => {
+    if (Array.isArray(post.tags)) {
+      post.tags.forEach((tag) => {
+        if (!tagsMap[tag]) {
+          tagsMap[tag] = [];
+        }
+        if (!tagsMap[tag].some((p: any) => p.slug === post.slug)) {
+          tagsMap[tag].push(post);
+        }
+      });
     }
-    acc[post.category].push(post);
-    return acc;
-  }, {});
+  });
+  return tagsMap;
 }

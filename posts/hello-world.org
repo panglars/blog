@@ -2,7 +2,7 @@
 #+date: <2023-09-19 Tue>
 #+category: Test
 #+language: English
-#+tags: test,hello
+#+tags: test
 
 Hello world!
 
