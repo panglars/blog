@@ -57,21 +57,19 @@ export function getAllPosts(fields: string[] = []) {
 }
 
 export function getAllTags(fields: string[] = []) {
-  const slugs = getPostSlugs();
-  let allPostsData = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-
-  return allPostsData.reduce((acc, post) => {
+  const allPosts = getAllPosts(fields);
+  const tagsMap: Record<string, any> = {};
+  allPosts.forEach((post) => {
     if (Array.isArray(post.tags)) {
       post.tags.forEach((tag) => {
-        if (!acc[tag]) {
-          acc[tag] = [];
+        if (!tagsMap[tag]) {
+          tagsMap[tag] = [];
         }
-        acc[tag].push(post);
+        if (!tagsMap[tag].some((p: any) => p.slug === post.slug)) {
+          tagsMap[tag].push(post);
+        }
       });
     }
-    // console.log(acc);
-    return acc;
-  }, {});
+  });
+  return tagsMap;
 }

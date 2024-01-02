@@ -3,7 +3,22 @@ import siteMetadata from "@/siteMetadata";
 import Link from "@/components/Link";
 import Tag from "@/components/Tag";
 
-export default async function CategoryList({ displayPosts, tagTitle }) {
+interface Post {
+  title: string;
+  date: string;
+  slug: string;
+  language: string;
+  category: string;
+  content: string;
+  tags: string[];
+}
+
+interface Props {
+  displayPosts: Post[];
+  tagTitle: string;
+}
+
+export default async function CategoryList({ displayPosts, tagTitle }: Props) {
   const postsTags = getAllTags([
     "title",
     "date",
@@ -78,14 +93,4 @@ export default async function CategoryList({ displayPosts, tagTitle }) {
       </div>
     </>
   );
-}
-
-interface Post {
-  title: string;
-  date: string;
-  slug: string;
-  language: string;
-  category: string;
-  content: string;
-  tags: string[];
 }

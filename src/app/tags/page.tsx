@@ -22,17 +22,15 @@ export default function Tags() {
           </h1>
         </div>
         <div className="flex max-w-lg flex-wrap">
-          {allTags.map((tag) => {
+          {Object.keys(allTags).map((tag) => {
             return (
               <div key={tag} className="mb-2 mr-5 mt-2">
                 <Tag text={tag} />
                 <Link
-                  href={`/tags/${slug(tag)}`}
+                  href={`/tags/$(tag)`}
                   className="-ml-2 text-sm font-semibold uppercase text-gray-600 dark:text-gray-300"
                   aria-label={`View posts tagged ${tag}`}
-                >
-                  {` (${tagCounts[tag]})`}
-                </Link>
+                ></Link>
               </div>
             );
           })}
