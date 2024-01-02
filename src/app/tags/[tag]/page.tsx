@@ -1,8 +1,8 @@
 import PostList from "@/layouts/PostListWithTags";
-import { getAllPosts } from "@/lib/posts";
+import { getAllTags } from "@/lib/posts";
 
 export default function TagPage({ params }: { params: { tag: string } }) {
-  const allPosts = getAllPosts([
+  const allTags = getAllTags([
     "title",
     "date",
     "slug",
@@ -11,6 +11,7 @@ export default function TagPage({ params }: { params: { tag: string } }) {
     "tags",
     "content",
   ]);
-
-  return <PostList displayPosts={allPosts} tagTitle={params} />;
+  const { tag } = params;
+  const displayPosts = allTags[tag] || [];
+  return <PostList displayPosts={displayPosts} tagTitle={tag} />;
 }

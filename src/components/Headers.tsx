@@ -18,12 +18,14 @@ export default function Headers() {
         </Link>
       </div>
       <nav className="flex items-center space-x-4 leading-5 sm:space-x-6">
+        {/*
         <Link
           href="/archive"
           className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
         >
           Archive
         </Link>
+          */}
         <Link
           href="/tags"
           className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
