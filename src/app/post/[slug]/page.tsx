@@ -1,6 +1,7 @@
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import type { Metadata } from "next";
 import PostBody from "@/components/postBody";
+import siteMetadata from "@/siteMetadata";
 
 type Props = {
   params: { id: string };
@@ -40,7 +41,20 @@ export default async function Post({ params }: Props) {
             {post.title}
           </h1>
         </div>
+        <div>
+          <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+            <time dateTime={post.date} className="ml-4">
+              {new Date(post.date).toLocaleDateString(siteMetadata.LANG, {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+                weekday: "short",
+              })}
+            </time>
+          </dd>
+        </div>
       </div>
+
       <PostBody content={post.content} />
     </>
   );

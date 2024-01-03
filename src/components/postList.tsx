@@ -29,7 +29,7 @@ export default async function PostList() {
                         siteMetadata.LANG,
                         {
                           year: "numeric",
-                          month: "long",
+                          month: "short",
                           day: "numeric",
                           weekday: "short",
                         },
@@ -40,7 +40,7 @@ export default async function PostList() {
                 <div className="space-y-5 xl:col-span-3">
                   <div className="space-y-6">
                     <div>
-                      <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                      <h2 className="text-3xl font-bold leading-8 tracking-tight">
                         <Link
                           href={`/post/${post.slug}`}
                           className="text-gray-900 dark:text-gray-100"
@@ -59,15 +59,6 @@ export default async function PostList() {
                         {post.summary}
                       </div>
                     )}
-                  </div>
-                  <div className="text-base font-medium leading-6">
-                    <Link
-                      href={`/post/${post.slug}`}
-                      className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                      aria-label={`Read more: "${post.title}"`}
-                    >
-                      Read more &rarr;
-                    </Link>
                   </div>
                 </div>
               </div>
