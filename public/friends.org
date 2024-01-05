@@ -1,7 +1,9 @@
-* Friends
-先友后链
+先交朋友,再加链接.只会添加我喜欢的博客,也不强求互链,博客介绍会根据我的对博主的印象手工编辑
+
+Make friends first, then add links.
 
 ** [[https://weepingdogel.github.io][WeepingDogel]]
-INFP-T / Arch User / ADHD | 不许叫 富狗 大佬 您 
-** [[https://poly000.github.io][Poly000]]
+正在做博客框架,有水平却不够自信
 
+** [[https://poly000.github.io][Poly000]]
+有家庭有房的男人,边上学边找工作,[[https://github.com/waylyrics/waylyrics][waylyrics]]的作者
