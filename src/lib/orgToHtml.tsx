@@ -8,6 +8,7 @@ import rehypeSanitize from "rehype-sanitize";
 const processor = unified()
   .use(uniorg)
   .use(extractKeywords)
+
   .use(uniorg2rehype)
   .use(rehypeSanitize)
   .use(html);
