@@ -6,9 +6,6 @@ Simple blog framework using Org-mode as the data source.
 ## Usage 
 
 ### Clong the project
-```bash
-
-```
 
 ### Set site information
 
@@ -16,6 +13,8 @@ see [siteMetadata](./src/siteMetadata.js)
 
 ### Add enviroment
 copy the `.env.example` to `.env.local` or use vercel Environment Variables
+
+### Edit about and firend page
 
 ### Push
 push your post by git 
