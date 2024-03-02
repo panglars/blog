@@ -1,5 +1,5 @@
 import PostList from "@/layouts/PostListWithTags";
-import { getAllTags } from "@/lib/posts";
+import { getAllTags } from "@/lib/api";
 
 export default function TagPage({ params }: { params: { tag: string } }) {
   const allTags = getAllTags([

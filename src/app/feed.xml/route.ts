@@ -1,5 +1,5 @@
 import RSS from "rss";
-import { getAllPosts } from "@/lib/posts";
+import { getAllPosts } from "@/lib/api";
 import siteMetadata from "@/siteMetadata";
 
 export async function GET() {

@@ -1,5 +1,4 @@
-import PostList from "@/layouts/PostListWithTags";
-import { getAllTags } from "@/lib/posts";
+import { getAllTags } from "@/lib/api";
 import Tag from "@/components/Tag";
 import Link from "@/components/Link";
 

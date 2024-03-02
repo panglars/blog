@@ -1,7 +1,6 @@
-import { getAllTags } from "@/lib/posts";
+import { getAllTags } from "@/lib/api";
 import siteMetadata from "@/siteMetadata";
 import Link from "@/components/Link";
-import Tag from "@/components/Tag";
 
 interface Post {
   title: string;

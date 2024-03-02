@@ -1,4 +1,4 @@
-import { getAllPosts } from "@/lib/posts";
+import { getAllPosts } from "@/lib/api";
 import Link from "@/components/Link";
 import siteMetadata from "@/siteMetadata";
 import Tag from "@/components/Tag";

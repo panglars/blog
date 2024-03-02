@@ -1,4 +1,4 @@
-import { getAllPosts, getPostBySlug } from "@/lib/posts";
+import { getAllPosts, getPostBySlug } from "@/lib/api";
 import type { Metadata } from "next";
 import PostBody from "@/components/postBody";
 import siteMetadata from "@/siteMetadata";
