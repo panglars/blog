@@ -1,6 +1,6 @@
 import fs from "fs";
 import { join } from "path";
-import orgToHtml from "@/lib/orgToHtml";
+import { orgToHtml } from "@/lib/orgToElement";
 
 function getFriends() {
   const friends = fs.readFileSync(
