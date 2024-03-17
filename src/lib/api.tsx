@@ -1,6 +1,6 @@
 import fs from "fs";
 import { join } from "path";
-import { orgToHtml, orgToJSX } from "./orgToElement";
+import { orgToHtml } from "./orgToElement";
 
 const postsDirectory = join(process.cwd(), "posts");
 
