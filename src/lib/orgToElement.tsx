@@ -3,8 +3,23 @@ import { uniorgSlug } from "uniorg-slug";
 import rehypeStringify from "rehype-stringify";
 import uniorg from "uniorg-parse";
 import uniorg2rehype from "uniorg-rehype";
-import extractKeywords from "uniorg-extract-keywords";
 import rehypeSanitize from "rehype-sanitize";
+import rehypePrettyCode from "rehype-pretty-code";
+import { extractKeywords } from "uniorg-extract-keywords";
+
+const htmlProcessor = unified()
+  .use(uniorg)
+  .use(extractKeywords)
+  .use(uniorgSlug)
+  .use(uniorg2rehype)
+
+  .use(rehypeSanitize)
+  .use(rehypePrettyCode, { theme: "one-dark-pro" })
+  .use(rehypeStringify);
+
+export function orgToHtml(org: string) {
+  return htmlProcessor.process(org);
+}
 
 /*
 import rehypeReact from "rehype-react";
@@ -33,16 +48,3 @@ export function orgToJSX(org: string) {
   return <>{processorJSX.processSync(org).result}</>;
 }
  */
-
-const htmlProcessor = unified()
-  .use(uniorg)
-  .use(extractKeywords)
-  .use(uniorgSlug)
-
-  .use(uniorg2rehype)
-  .use(rehypeSanitize)
-  .use(rehypeStringify);
-
-export function orgToHtml(org: string) {
-  return htmlProcessor.processSync(org);
-}

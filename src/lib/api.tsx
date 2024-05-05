@@ -1,6 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import { orgToHtml } from "./orgToElement";
+import toVFile from "to-vfile";
 
 const postsDirectory = join(process.cwd(), "posts");
 
@@ -14,9 +15,9 @@ export function getPostBySlug(
 ): Record<string, any> {
   const realSlug = slug.replace(/\.org$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.org`);
-  const content = fs.readFileSync(fullPath, "utf8");
+  const content = toVFile.readSync(fullPath);
+  console.log("org:", content);
   const org = orgToHtml(content);
-  //  console.log(org);
   const items: Record<string, any> = {};
 
   // Ensure only the minimal needed data is exposed
