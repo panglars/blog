@@ -2,19 +2,17 @@ import Link from "next/link";
 import { ThemeToggle } from "./themeToggle";
 import { IoLogoRss } from "react-icons/io5";
 import MobileNav from "./MobileNav";
+import siteMetadata from "@/siteMetadata";
 
 export default function Headers() {
   return (
-    <header className="flex items-center justify-between py-10">
+    <header className="flex items-center justify-between py-10 text-xl">
       <div>
-        {
-          // TODO: Add blog logo
-        }
         <Link
           href="/"
-          className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
+          className="hidden text-2xl font-medium text-gray-900 dark:text-gray-100 sm:block"
         >
-          Blog
+          {siteMetadata.TITLE}
         </Link>
       </div>
       <nav className="flex items-center space-x-4 leading-5 sm:space-x-6">
