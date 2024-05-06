@@ -14,12 +14,11 @@ const htmlProcessor = unified()
   .use(uniorg2rehype)
 
   .use(rehypeSanitize)
-  .use(rehypePrettyCode, { theme: "one-dark-pro" })
+  // .use(rehypePrettyCode, { theme: "one-dark-pro" })
   .use(rehypeStringify);
 
-export async function orgToHtml(org: string) {
-  const result = await htmlProcessor.process(org);
-  console.log(result);
+export function orgToHtml(org: string) {
+  const result = htmlProcessor.processSync(org);
   return result;
 }
 
