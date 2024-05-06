@@ -1,24 +1,26 @@
 import { unified } from "unified";
 import { uniorgSlug } from "uniorg-slug";
 import rehypeStringify from "rehype-stringify";
-import uniorg from "uniorg-parse";
+import uniorgParse from "uniorg-parse";
 import uniorg2rehype from "uniorg-rehype";
 import rehypeSanitize from "rehype-sanitize";
 import rehypePrettyCode from "rehype-pretty-code";
 import { extractKeywords } from "uniorg-extract-keywords";
 
 const htmlProcessor = unified()
-  .use(uniorg)
+  .use(uniorgParse)
   .use(extractKeywords)
-  .use(uniorgSlug)
+  .use(uniorgSlug) //add anchors headings
   .use(uniorg2rehype)
 
   .use(rehypeSanitize)
   .use(rehypePrettyCode, { theme: "one-dark-pro" })
   .use(rehypeStringify);
 
-export function orgToHtml(org: string) {
-  return htmlProcessor.process(org);
+export async function orgToHtml(org: string) {
+  const result = await htmlProcessor.process(org);
+  console.log(result);
+  return result;
 }
 
 /*
