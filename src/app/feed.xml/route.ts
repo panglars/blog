@@ -12,7 +12,7 @@ export async function GET() {
     site_url: siteMetadata.SITEURL,
     feed_url: siteMetadata.SITEURL + "/feed.xml",
   });
-  const allPostsData = getAllPosts([
+  const allPostsData = await getAllPosts([
     "title",
     "date",
     "slug",

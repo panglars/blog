@@ -4,7 +4,7 @@ import siteMetadata from "@/siteMetadata";
 import Tag from "@/components/Tag";
 
 export default async function PostList() {
-  const allPosts = getAllPosts([
+  const allPosts = await getAllPosts([
     "title",
     "date",
     "slug",

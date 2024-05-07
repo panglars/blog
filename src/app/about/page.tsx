@@ -2,16 +2,16 @@ import fs from "fs";
 import { join } from "path";
 import { orgToHtml } from "@/lib/orgToElement";
 
-function getFriends() {
+async function getFriends() {
   const context = fs.readFileSync(
     join(process.cwd(), "public/about.org"),
     "utf8",
   );
-  return orgToHtml(context);
+  return await orgToHtml(context);
 }
 
-export default function Page() {
-  const about = getFriends();
+export default async function Page() {
+  const about = await getFriends();
   return (
     <>
       <article

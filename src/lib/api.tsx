@@ -8,16 +8,15 @@ export function getPostSlugs(): string[] {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(
+export async function getPostBySlug(
   slug: string,
   fields: string[] = [],
-): Record<string, any> {
+): Promise<Record<string, any>> {
   const realSlug = slug.replace(/\.org$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.org`);
   const content = fs.readFileSync(fullPath, "utf-8");
-  const org = orgToHtml(content);
+  const org = await orgToHtml(content);
   // console.log("---:", org);
-
   const items: Record<string, any> = {};
 
   // Ensure only the minimal needed data is exposed
@@ -46,19 +45,20 @@ export function getPostBySlug(
         break;
     }
   });
-  //  console.log(items);
+  // console.log(typeof items);
   return items;
 }
 
-export function getAllPosts(fields: string[] = []) {
+export async function getAllPosts(fields: string[] = []) {
   const slugs = getPostSlugs();
-  return slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+  const posts = await Promise.all(
+    slugs.map((slug) => getPostBySlug(slug, fields)),
+  );
+  return posts.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 }
 
-export function getAllTags(fields: string[] = []) {
-  const allPosts = getAllPosts(fields);
+export async function getAllTags(fields: string[] = []) {
+  const allPosts = await getAllPosts(fields);
   const tagsMap: Record<string, any> = {};
   allPosts.forEach((post) => {
     if (Array.isArray(post.tags)) {

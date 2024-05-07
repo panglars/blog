@@ -1,8 +1,8 @@
 import PostList from "@/layouts/PostListWithTags";
 import { getAllTags } from "@/lib/api";
 
-export default function TagPage({ params }: { params: { tag: string } }) {
-  const allTags = getAllTags([
+export default async function TagPage({ params }: { params: { tag: string } }) {
+  const allTags = await getAllTags([
     "title",
     "date",
     "slug",

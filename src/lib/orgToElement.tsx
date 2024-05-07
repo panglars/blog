@@ -4,8 +4,8 @@ import rehypeStringify from "rehype-stringify";
 import uniorgParse from "uniorg-parse";
 import uniorg2rehype from "uniorg-rehype";
 import rehypeSanitize from "rehype-sanitize";
-import rehypePrettyCode from "rehype-pretty-code";
 import { extractKeywords } from "uniorg-extract-keywords";
+import rehypeShiki from "@shikijs/rehype";
 
 const htmlProcessor = unified()
   .use(uniorgParse)
@@ -14,11 +14,13 @@ const htmlProcessor = unified()
   .use(uniorg2rehype)
 
   .use(rehypeSanitize)
-  // .use(rehypePrettyCode, { theme: "one-dark-pro" })
+  .use(rehypeShiki, {
+    theme: "github-dark",
+  })
   .use(rehypeStringify);
 
-export function orgToHtml(org: string) {
-  const result = htmlProcessor.processSync(org);
+export async function orgToHtml(org: string) {
+  const result = await htmlProcessor.process(org);
   return result;
 }
 
