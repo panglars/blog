@@ -8,20 +8,20 @@ import { extractKeywords } from "uniorg-extract-keywords";
 import rehypeShiki from "@shikijs/rehype";
 
 const htmlProcessor = unified()
-  .use(uniorgParse)
-  .use(extractKeywords)
-  .use(uniorgSlug) //add anchors headings
-  .use(uniorg2rehype)
+	.use(uniorgParse)
+	.use(extractKeywords)
+	.use(uniorgSlug) //add anchors headings
+	.use(uniorg2rehype)
 
-  .use(rehypeSanitize)
-  .use(rehypeShiki, {
-    theme: "github-dark",
-  })
-  .use(rehypeStringify);
+	.use(rehypeSanitize)
+	.use(rehypeShiki, {
+		theme: "github-dark",
+	})
+	.use(rehypeStringify);
 
 export async function orgToHtml(org: string) {
-  const result = await htmlProcessor.process(org);
-  return result;
+	const result = await htmlProcessor.process(org);
+	return result;
 }
 
 /*
