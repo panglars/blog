@@ -1,4 +1,4 @@
-# Noog 
+# My blog 
 
 Simple blog framework using Org-mode as the data source.
 
