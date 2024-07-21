@@ -23,31 +23,3 @@ export async function orgToHtml(org: string) {
 	const result = await htmlProcessor.process(org);
 	return result;
 }
-
-/*
-import rehypeReact from "rehype-react";
-import { createElement } from "react";
-import * as prod from "react/jsx-runtime";
-import Link from "@/components/Link";
-
-const production = {
-  jsx: prod.jsx,
-  jsxs: prod.jsxs,
-  Fragment: prod.Fragment,
-  components: {
-    a: Link,
-  },
-};
-const processorJSX = unified()
-  .use(uniorg)
-  .use(extractKeywords)
-  .use(uniorgSlug)
-
-  .use(uniorg2rehype)
-  .use(rehypeSanitize)
-// .use(rehypeReact, { production, createElement });
-
-export function orgToJSX(org: string) {
-  return <>{processorJSX.processSync(org).result}</>;
-}
- */

@@ -4,7 +4,7 @@ import PostBody from "@/components/postBody";
 import siteMetadata from "@/siteMetadata";
 
 type Props = {
-	params: { id: string };
+	params: { id: string; slug: string };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 	return getAllPosts(["slug"]);
 }
 
-async function getPost(params: any) {
+async function getPost(params: { id: string; slug: string }) {
 	return getPostBySlug(params.slug, [
 		"title",
 		"date",
