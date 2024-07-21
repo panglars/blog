@@ -3,10 +3,10 @@
 Make friends first, then add links.
 
 ** [[https://weepingdogel.github.io][WeepingDogel]]
-正在做博客框架,有水平却不够自信
+正在做博客框架
 
 ** [[https://poly000.github.io][Poly000]]
-有家庭有房的男人,边上学边找工作,[[https://github.com/waylyrics/waylyrics][waylyrics]]的作者
+[[https://github.com/waylyrics/waylyrics][waylyrics]]的作者
 
 ** [[https://sbchild.top/blog/][色妹妹]]
-
+做了很多涩涩工具
