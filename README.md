@@ -7,14 +7,14 @@ Simple blog framework using Org-mode as the data source.
 
 ### Clong the project
 
-### Set site information
+### Setting site information
 
 see [siteMetadata](./src/siteMetadata.js)
 
 ### Add enviroment
 copy the `.env.example` to `.env.local` or use vercel Environment Variables
 
-### Edit about and firend page
+### Edit about.org and firend.org
 
 ### Push
 push your post by git 
@@ -27,9 +27,9 @@ pnpm run dev
 ```
 
 ## Todo
-- [ ] Code Blocks highlight
-- [ ] Add comment system
+- [x] Code Blocks highlight
 - [x] Add friends page
+- [ ] Add comment system
 - [ ] Archive page
 
 ## Credits
