@@ -35,6 +35,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang={siteMetadata.LANG}
+			suppressHydrationWarning
 			className={`${space_grotesk.variable} scroll-smooth`}>
 			<body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
