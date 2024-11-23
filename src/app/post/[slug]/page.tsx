@@ -4,13 +4,14 @@ import PostBody from "@/components/postBody";
 import siteMetadata from "@/siteMetadata";
 
 type Props = {
-	params: { id: string; slug: string };
+	params: Promise<{ id: string; slug: string }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-	// read route params
-	const post = await getPost(params);
-	return {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+    const params = await props.params;
+    // read route params
+    const post = await getPost(params);
+    return {
 		title: post.title,
 	};
 }
@@ -31,9 +32,10 @@ async function getPost(params: { id: string; slug: string }) {
 	]);
 }
 
-export default async function Post({ params }: Props) {
-	const post = await getPost(params);
-	return (
+export default async function Post(props: Props) {
+    const params = await props.params;
+    const post = await getPost(params);
+    return (
 		<>
 			<div className="space-y-1 pb-10 text-center dark:border-gray-700">
 				<div className="relative pt-10">
